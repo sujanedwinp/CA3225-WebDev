@@ -155,58 +155,53 @@
         <div class="grid" id="pagesGrid">
             <!-- Pages will be dynamically loaded here -->
         </div>
-        <div class="config-info">
-            <h3>📝 How to Add New Pages</h3>
-            <p>To add new pages, edit the <code>pagesConfig</code> object in the JavaScript section below. Simply add a new object with:</p>
-            <ul style="margin-left: 20px; margin-top: 10px;">
-                <li><code>name</code>: The display name of the page</li>
-                <li><code>demoUrl</code>: The local HTML file path</li>
-                <li><code>githubUrl</code>: The GitHub repository link (optional)</li>
-            </ul>
-        </div>
     </div>
     <script>
         // Configuration object - Edit this to add/remove pages
-        const pagesConfig = [
+        const pagesConfig = [{
+                name: "Coffee Reserve Form",
+                demoUrl: "coffee-reserve-form.html",
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/coffee-reserve-form.html"
+            },
             {
-                name: "Class Timetable",
-                demoUrl: "index.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                name: "Timetable",
+                demoUrl: "timetable.html",
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/timetable.html"
             },
             {
                 name: "Basic Profile Page",
                 demoUrl: "basic-profile-page.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/basic-profile-page.html"
             },
             {
                 name: "First Page",
                 demoUrl: "first-page.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/first-page.html"
             },
             {
                 name: "Header Tags",
                 demoUrl: "header-tags.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/header-tags.html"
             },
             {
                 name: "Images Tag",
                 demoUrl: "images-tag.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/images-tag.html"
             },
             {
                 name: "Lists Tag",
                 demoUrl: "lists-tag.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/lists-tag.html"
             },
             {
                 name: "Paragraphs and Links",
                 demoUrl: "para-links-tag.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/para-links-tag.html"
             },
             {
-                name: "Coffee Reserve Form",
-                demoUrl: "coffee-reserve-form.html",
-                githubUrl: "https://github.com/yourusername/html-testing"
+                name: "Semantic Tags",
+                demoUrl: "semantic.html",
+                githubUrl: "https://github.com/sujanedwinp/CA3225-WebDev/blob/main/public/semantic.html"
             }
         ];
         // Function to render pages

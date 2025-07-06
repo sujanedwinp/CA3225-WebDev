@@ -4,7 +4,7 @@ A collection of HTML pages demonstrating various web development concepts and te
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-vercel-app.vercel.app)
+[View Live Demo](https://bcatt.vercel.app)
 
 ## 📁 Project Structure
 
@@ -64,48 +64,3 @@ html-testing/
 
 1. Add your HTML file to `public/`
 2. Edit `public/page-navi.html` and add your page to the `pagesConfig` array
-
-## 🎨 Customization
-
-### Styling
-- Main styles are in the `<style>` sections of each HTML file
-- The navigation page uses a modern gradient design
-- All pages are responsive and mobile-friendly
-
-### Colors
-- Primary: `#4CAF50` (Green)
-- Secondary: `#667eea` to `#764ba2` (Gradient)
-- Text: `#333` (Dark Gray)
-
-## 📱 Pages Included
-
-1. **Class Timetable** - BCA Semester 3 timetable
-2. **Basic Profile Page** - Personal information display
-3. **First Page** - Simple welcome page
-4. **Header Tags** - HTML heading examples
-5. **Images Tag** - Image display examples
-6. **Lists Tag** - Ordered and unordered lists
-7. **Paragraphs and Links** - Text and link examples
-8. **Coffee Reserve Form** - Interactive form with styling
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test locally
-5. Submit a pull request
-
-## 📞 Support
-
-If you have any questions or need help:
-- Open an issue on GitHub
-- Contact: your-email@example.com
-
----
-
-**Made with ❤️ for web development learning**
