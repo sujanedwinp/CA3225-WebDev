@@ -10,18 +10,17 @@ A collection of HTML pages demonstrating various web development concepts and te
 
 ```
 html-testing/
-├── api/
-│   └── all-pages/          # All HTML files, CSS, and assets
-│       ├── index.html      # Main timetable page
-│       ├── page-navi.html  # Navigation hub
-│       ├── basic-profile-page.html
-│       ├── first-page.html
-│       ├── header-tags.html
-│       ├── images-tag.html
-│       ├── lists-tag.html
-│       ├── para-links-tag.html
-│       └── coffee-reserve-form.html
-├── vercel.json             # Vercel configuration
+├── public/                # All HTML files, CSS, and assets
+│   ├── index.html         # Main timetable page
+│   ├── page-navi.html     # Navigation hub
+│   ├── basic-profile-page.html
+│   ├── first-page.html
+│   ├── header-tags.html
+│   ├── images-tag.html
+│   ├── lists-tag.html
+│   ├── para-links-tag.html
+│   └── coffee-reserve-form.html
+├── vercel.json            # Vercel configuration
 └── README.md
 ```
 
@@ -42,8 +41,8 @@ html-testing/
    git clone https://github.com/yourusername/html-testing.git
    cd html-testing
    ```
-2. **Open `api/all-pages/index.html` in your browser**
-   (Or use a local static server like `npx serve api/all-pages`)
+2. **Open `public/index.html` in your browser**
+   (Or use a local static server like `npx serve public`)
 
 ### Vercel Deployment (Static Hosting)
 
@@ -59,12 +58,12 @@ html-testing/
    - Vercel will automatically detect the configuration
    - Deploy!
 
-**Vercel will serve `/` as `api/all-pages/index.html` and all other HTML files in `api/all-pages/` are accessible directly.**
+**Vercel will serve `/` as `public/index.html` and all other HTML files in `public/` are accessible directly.**
 
 ## 📝 Adding New Pages
 
-1. Add your HTML file to `api/all-pages/`
-2. Edit `api/all-pages/page-navi.html` and add your page to the `pagesConfig` array
+1. Add your HTML file to `public/`
+2. Edit `public/page-navi.html` and add your page to the `pagesConfig` array
 
 ## 🎨 Customization
 

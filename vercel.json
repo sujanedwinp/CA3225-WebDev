@@ -1,6 +1,3 @@
 {
-  "version": 2,
-  "rewrites": [
-    { "source": "/", "destination": "/api/all-pages/index.html" }
-  ]
+  "version": 2
 } 
