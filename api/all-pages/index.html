@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Timetable</title>
+    <!-- Lovelo Black (filled) font -->
+    <link href="https://fonts.cdnfonts.com/css/lovelo" rel="stylesheet">
+    <!-- Proxima Nova font -->
+    <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+    <link rel="stylesheet" href="timetable.css">
+    <style>
+        .nav-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            z-index: 1000;
+        }
+        .nav-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+<h2>BCA SEM 3 TIMETABLE</h2>
+<div style="overflow-x:auto;">
+<table id="timetable">
+    <tr>
+        <th>Day</th>
+        <th>10:10-11:00</th>
+        <th>11:05-11:55</th>
+        <th>12:00-12:50</th>
+        <th>12:50-1:50</th>
+        <th>1:50-2:40</th>
+        <th>2:45-3:35</th>
+        <th>3:40-4:30</th>
+    </tr>
+    <tr>
+        <td class="day-header">MON</td>
+        <td>Lang:G/T/SK/IK</td>
+        <td></td>
+        <td>GE</td>
+        <td class="lunch" rowspan="6">LUNCH</td>
+        <td class="lab" colspan="2">DBMS LAB</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="day-header">TUE</td>
+        <td>Lang:G/T/SK/IK</td>
+        <td></td>
+        <td>GE</td>
+        <td>DBMS</td>
+        <td>AI</td>
+        <td>COA</td>
+    </tr>
+    <tr>
+        <td class="day-header">WED</td>
+        <td>Lang:G/T/SK/IK</td>
+        <td>MDC</td>
+        <td>GE</td>
+        <td>COA</td>
+        <td>DBMS</td>
+        <td>WEB</td>
+    </tr>
+    <tr>
+        <td class="day-header">THU</td>
+        <td></td>
+        <td>WEB</td>
+        <td>Lang:AE/K/H</td>
+        <td>COA</td>
+        <td>AI</td>
+        <td>DBMS</td>
+    </tr>
+    <tr>
+        <td class="day-header">FRI</td>
+        <td>WEB</td>
+        <td>MDC</td>
+        <td>Lang:AE/K/H</td>
+        <td class="lab" colspan="2">WEB LAB</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td class="day-header">SAT</td>
+        <td>LIBRARY</td>
+        <td>AI</td>
+        <td>Lang:AE/K/H</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</div>
+<div class="nav-btn-container">
+    <a href="page-navi.html" class="nav-button">View all pages</a>
+  </div>
+</body>
+</html>

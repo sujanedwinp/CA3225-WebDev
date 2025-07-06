@@ -1,0 +1,130 @@
+.nav-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 10px 0;
+}
+
+.nav-button {
+  background: linear-gradient(90deg, #223366 0%, #3a5ba0 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.nav-button:hover {
+  background: linear-gradient(90deg, #1a2540 0%, #223366 100%);
+}
+body {
+    background: #10182a;
+    color: #e0e6f0;
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    margin: 0;
+    padding: 0 100px;
+}
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+}
+h2 {
+    color: #fff;
+    letter-spacing: 3px;
+    margin: 40px 0 30px 0;
+    text-align: center;
+    font-family: 'Lovelo Line Bold', 'Lovelo', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+.timetable-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    background: #182447;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px #000a;
+    padding: 40px 40px 50px 40px;
+}
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #182447;
+    table-layout: fixed;
+}
+th, td {
+    border: 1.5px solid #2a3557;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1.08rem;
+    transition: box-shadow 0.2s, background 0.2s;
+    min-width: 180px;
+    max-width: 300px;
+    height: 48px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+th {
+    background: #223366;
+    color: #fff;
+    font-size: 1.15rem;
+    letter-spacing: 1.5px;
+    font-family: 'Lovelo Black', 'Lovelo', Arial, sans-serif;
+    font-weight: 900;
+}
+th:first-child, td.day-header {
+    min-width: 140px;
+    max-width: 200px;
+    white-space: normal;
+    text-overflow: unset;
+    overflow: visible;
+}
+.day-header {
+    background: #1a2540;
+    color: #7ecbff;
+    font-family: 'Lovelo Black', 'Lovelo', Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+.current-class {
+    background: #2e4a7d !important;
+    color: #fff !important;
+    box-shadow: 0 0 16px 2px #7ecbff99;
+    z-index: 1;
+    position: relative;
+}
+td {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    font-weight: 600;
+    color: #e0e6f0;
+}
+td:hover {
+    box-shadow: 0 0 10px 2px #7ecbff77;
+    background: #223366;
+    cursor: pointer;
+}
+.lunch {
+    background: #1e2d4d;
+    color: #ffb347;
+    font-weight: bold;
+    font-family: 'Proxima Nova', Arial, sans-serif;
+}
+.lab {
+    background: #223366;
+    color: #ffb347;
+    font-family: 'Proxima Nova', Arial, sans-serif;
+}
+@media (max-width: 1500px) {
+    .timetable-container { padding: 10px; }
+    th, td { font-size: 0.95rem; padding: 10px 0; }
+    h2 { font-size: 1.5rem; }
+} 

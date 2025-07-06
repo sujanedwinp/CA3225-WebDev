@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Pages - Navigation</title>
+    <style>
+        body {
+            font-family: 'Proxima Nova', Arial, sans-serif;
+            background: linear-gradient(135deg, #10182a 0%, #223366 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #e0e6f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            font-family: 'Lovelo Black', 'Lovelo', Arial, sans-serif;
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: #182447;
+            border-radius: 18px;
+            padding: 30px 25px 25px 25px;
+            box-shadow: 0 4px 32px #000a;
+            border: 1.5px solid #2a3557;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 8px 40px #223366cc;
+        }
+        .card h3 {
+            color: #7ecbff;
+            font-size: 1.25rem;
+            margin-bottom: 18px;
+            margin-top: 0px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: 'Lovelo Black', 'Lovelo', Arial, sans-serif;
+        }
+        .links {
+            display: flex;
+            gap: 15px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
+            min-width: 80px;
+            font-size: 1rem;
+        }
+        .btn-demo {
+            background: linear-gradient(90deg, #223366 0%, #3a5ba0 100%);
+            color: #fff;
+        }
+        .btn-demo:hover {
+            background: linear-gradient(90deg, #1a2540 0%, #223366 100%);
+            transform: scale(1.07);
+        }
+        .btn-github {
+            background: #2a3557;
+            color: #7ecbff;
+        }
+        .btn-github:hover {
+            background: #223366;
+            color: #fff;
+            transform: scale(1.07);
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #223366;
+            color: #fff;
+            padding: 12px 24px;
+            border: 2px solid #7ecbff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            font-size: 1rem;
+        }
+        .back-btn:hover {
+            background: #7ecbff;
+            color: #223366;
+        }
+        .config-info {
+            background: #182447;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            color: #e0e6f0;
+            box-shadow: 0 2px 16px #0005;
+        }
+        .config-info h3 {
+            margin-bottom: 15px;
+            color: #7ecbff;
+        }
+        .config-info code {
+            background: #223366;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #7ecbff;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 2rem; }
+            .links { gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+    <div class="container">
+        <div class="header">
+            <h1>All Pages</h1>
+            <p>Navigate through all available HTML pages</p>
+        </div>
+        <div class="grid" id="pagesGrid">
+            <!-- Pages will be dynamically loaded here -->
+        </div>
+        <div class="config-info">
+            <h3>📝 How to Add New Pages</h3>
+            <p>To add new pages, edit the <code>pagesConfig</code> object in the JavaScript section below. Simply add a new object with:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><code>name</code>: The display name of the page</li>
+                <li><code>demoUrl</code>: The local HTML file path</li>
+                <li><code>githubUrl</code>: The GitHub repository link (optional)</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Configuration object - Edit this to add/remove pages
+        const pagesConfig = [
+            {
+                name: "Class Timetable",
+                demoUrl: "index.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "Basic Profile Page",
+                demoUrl: "basic-profile-page.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "First Page",
+                demoUrl: "first-page.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "Header Tags",
+                demoUrl: "header-tags.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "Images Tag",
+                demoUrl: "images-tag.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "Lists Tag",
+                demoUrl: "lists-tag.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "Paragraphs and Links",
+                demoUrl: "para-links-tag.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            },
+            {
+                name: "Coffee Reserve Form",
+                demoUrl: "coffee-reserve-form.html",
+                githubUrl: "https://github.com/yourusername/html-testing"
+            }
+        ];
+        // Function to render pages
+        function renderPages() {
+            const grid = document.getElementById('pagesGrid');
+            pagesConfig.forEach(page => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <h3>${page.name}</h3>
+                    <div class="links">
+                        ${page.githubUrl ? `<a href="${page.githubUrl}" target="_blank" class="btn btn-github">GitHub</a>` : ''}
+                        <a href="${page.demoUrl}" class="btn btn-demo">Demo</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', renderPages);
+    </script>
+</body>
+</html>

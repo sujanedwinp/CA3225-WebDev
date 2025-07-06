@@ -3,9 +3,10 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const HTML_FILE = process.env.HTML_FILE || 'api/all-pages/base-file.html';
+const HTML_FILE = process.env.HTML_FILE || 'api/all-pages/index.html';
 
 app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'api/all-pages')));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, HTML_FILE));
