@@ -1,6 +1,6 @@
 # HTML Testing Project
 
-A collection of HTML pages demonstrating various web development concepts and techniques. This project includes a dynamic navigation system and is ready for deployment on Vercel.
+A collection of HTML pages demonstrating various web development concepts and techniques. This project includes a dynamic navigation system and is ready for deployment on Vercel as a static site.
 
 ## 🚀 Live Demo
 
@@ -11,28 +11,25 @@ A collection of HTML pages demonstrating various web development concepts and te
 ```
 html-testing/
 ├── api/
-│   ├── all-pages/          # All HTML files
-│   │   ├── index.html      # Main timetable page
-│   │   ├── page-navi.html  # Navigation hub
-│   │   ├── basic-profile-page.html
-│   │   ├── first-page.html
-│   │   ├── header-tags.html
-│   │   ├── images-tag.html
-│   │   ├── lists-tag.html
-│   │   ├── para-links-tag.html
-│   │   └── coffee-reserve-form.html
-│   └── index.js            # API handler
-├── server.js               # Express server
-├── package.json
-├── vercel.json            # Vercel configuration
+│   └── all-pages/          # All HTML files, CSS, and assets
+│       ├── index.html      # Main timetable page
+│       ├── page-navi.html  # Navigation hub
+│       ├── basic-profile-page.html
+│       ├── first-page.html
+│       ├── header-tags.html
+│       ├── images-tag.html
+│       ├── lists-tag.html
+│       ├── para-links-tag.html
+│       └── coffee-reserve-form.html
+├── vercel.json             # Vercel configuration
 └── README.md
 ```
 
 ## 🛠️ Features
 
-- **Dynamic Navigation**: 4-column responsive grid showing all pages
-- **Easy Page Management**: Add new pages without editing HTML manually
-- **Vercel Ready**: Configured for instant deployment
+- **Dynamic Navigation**: Responsive grid showing all pages
+- **Easy Page Management**: Add new pages by editing `page-navi.html`
+- **Vercel Ready**: Configured for instant static deployment
 - **Responsive Design**: Works on all devices
 - **Modern UI**: Beautiful gradient design with hover effects
 
@@ -45,56 +42,29 @@ html-testing/
    git clone https://github.com/yourusername/html-testing.git
    cd html-testing
    ```
+2. **Open `api/all-pages/index.html` in your browser**
+   (Or use a local static server like `npx serve api/all-pages`)
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open in browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-### Vercel Deployment
+### Vercel Deployment (Static Hosting)
 
 1. **Push to GitHub**
    ```bash
    git add .
-   git commit -m "Ready for deployment"
+   git commit -m "Ready for static deployment"
    git push origin main
    ```
-
 2. **Deploy to Vercel**
    - Go to [vercel.com](https://vercel.com)
    - Import your GitHub repository
    - Vercel will automatically detect the configuration
    - Deploy!
 
+**Vercel will serve `/` as `api/all-pages/index.html` and all other HTML files in `api/all-pages/` are accessible directly.**
+
 ## 📝 Adding New Pages
 
-### Method 1: Edit page-navi.html (Recommended)
-
-1. Open `api/all-pages/page-navi.html`
-2. Find the `pagesConfig` array in the JavaScript section
-3. Add a new object:
-
-```javascript
-{
-    name: "Your Page Name",
-    demoUrl: "your-page.html",
-    githubUrl: "https://github.com/yourusername/html-testing"
-}
-```
-
-### Method 2: Using Environment Variables
-
-```bash
-HTML_FILE=api/all-pages/your-page.html npm run dev
-```
+1. Add your HTML file to `api/all-pages/`
+2. Edit `api/all-pages/page-navi.html` and add your page to the `pagesConfig` array
 
 ## 🎨 Customization
 
@@ -118,19 +88,6 @@ HTML_FILE=api/all-pages/your-page.html npm run dev
 6. **Lists Tag** - Ordered and unordered lists
 7. **Paragraphs and Links** - Text and link examples
 8. **Coffee Reserve Form** - Interactive form with styling
-
-## 🔧 Scripts
-
-- `npm start` - Start production server
-- `npm run dev` - Start development server with nodemon
-- `npm run dev:custom` - Start with custom HTML file
-
-## 🌐 Deployment
-
-This project is configured for:
-- **Vercel** (Primary) - Serverless deployment
-- **Heroku** - Traditional hosting
-- **Netlify** - Static hosting
 
 ## 📄 License
 
