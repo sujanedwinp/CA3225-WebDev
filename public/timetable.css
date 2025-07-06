@@ -5,21 +5,26 @@
 }
 
 .nav-button {
-  background: linear-gradient(90deg, #223366 0%, #3a5ba0 100%);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2a3557;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    z-index: 1000;
 }
 
 .nav-button:hover {
-  background: linear-gradient(90deg, #1a2540 0%, #223366 100%);
+    background: #7ecbff;
+    color: #223366;
 }
 body {
     background: #10182a;
