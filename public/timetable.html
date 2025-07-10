@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timetable</title>
+    <style>
+        .grey-box{
+            color: #110909;
+            background-color: #767b91;
+        }
+    </style>
 </head>
-<body style="text-align: center;background-color: #050609;  font-family: 'Courier New', monospace;">
+<body style="text-align: center; background-color: #050609;  font-family: 'Courier New', monospace;">
     <h2 style="margin-top: 30px; color: #ee2e31; font-size: 50px;">BCA TIMETABLE</h2>
     <div style="display: flex; justify-content: center;">
-        <table border="1" cellspacing="0" cellpadding="5" style="margin:auto; border-color: #fffcf9;">
-            <tr style="color: #110909; background-color: #767b91;">
+        <table border="1" cellspacing="0" cellpadding="5" style="margin:auto; border-color: #fffcf9; color: #ee2e31;">
+            <tr class="grey-box">
                 <th style="color: #ee2e31; background-color: #050609;"><strong>DAY</strong></th>
                 <th>10:10-11:00</th>
                 <th>11:05-11:55</th>
@@ -19,55 +25,49 @@
                 <th>2:45-3:35</th>
                 <th>3:40-4:30</th>
             </tr>
-            <tr style="color: #ee2e31;">
-                <td style="color: #110909; background-color: #767b91;"><strong>MON</strong></td>
-                <td>Lang:G/T/SK/IK</td>
+            <tr>
+                <td class="grey-box"><strong>MON</strong></td>
+                <td rowspan="3">Lang:G/T/SK/IK</td>
                 <td></td>
-                <td>GE</td>
+                <td rowspan="3">GE</td>
                 <td rowspan="6">LUNCH</td>
                 <td colspan="2">DBMS LAB</td>
                 <td></td>
             </tr>
-            <tr style="color: #ee2e31;">
-                <td style="color: #110909; background-color: #767b91;"><strong>TUE</strong></td>
-                <td>Lang:G/T/SK/IK</td>
-                <td></td>
-                <td>GE</td>
+            <tr>
+                <td class="grey-box"><strong>TUE</strong></td>
+                <td>DBMS</td>
                 <td>DBMS</td>
                 <td>AI</td>
                 <td>COA</td>
             </tr>
-            <tr style="color: #ee2e31;">
-                <td style="color: #110909; background-color: #767b91;"><strong>WED</strong></td>
-                <td>Lang:G/T/SK/IK</td>
+            <tr>
+                <td class="grey-box"><strong>WED</strong></td>
                 <td>MDC</td>
-                <td>GE</td>
                 <td>COA</td>
                 <td>DBMS</td>
                 <td>WEB</td>
             </tr>
-            <tr style="color: #ee2e31;">
-                <td style="color: #110909; background-color: #767b91;"><strong>THU</strong></td>
+            <tr>
+                <td class="grey-box"><strong>THU</strong></td>
                 <td></td>
                 <td>WEB</td>
-                <td>Lang:AE/K/H</td>
+                <td rowspan="3">Lang:AE/K/H</td>
                 <td>COA</td>
                 <td>AI</td>
-                <td>DBMS</td>
+                <td></td>
             </tr>
-            <tr style="color: #ee2e31;">
-                <td style="color: #110909; background-color: #767b91;"><strong>FRI</strong></td>
+            <tr>
+                <td class="grey-box"><strong>FRI</strong></td>
                 <td>WEB</td>
                 <td>MDC</td>
-                <td>Lang:AE/K/H</td>
                 <td colspan="2">WEB LAB</td>
                 <td></td>
             </tr>
-            <tr style="color: #ee2e31;">
-                <td style="color: #110909; background-color: #767b91;"><strong>SAT</strong></td>
+            <tr>
+                <td class="grey-box"><strong>SAT</strong></td>
                 <td>LIBRARY</td>
                 <td>AI</td>
-                <td>Lang:AE/K/H</td>
                 <td></td>
                 <td></td>
                 <td></td>
