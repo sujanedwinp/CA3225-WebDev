@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body{
+            width: 100%;
+            height: auto;
+            padding: 0;
+            margin: 10px;
+            background-color: hsl(0, 0%, 0%);
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a{
+            padding: 10px;
+            color: red;
+        }
+        img {
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+            border-radius: 50px;
+            object-fit: cover;
+            object-position: -129px 0px;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="center" style="width: 100%;">
+        <a href="#">Home</a>
+        <a href="#">Text</a>
+        <a href="#">Image</a>
+    </nav>
+    <main class="center">
+        <div style="color: white;">
+            <h1 class="red">Home page</h1>
+            <p>Color changed using <span class="red">CSS</span>.</p>
+        </div>
+        <img src="./img.png" alt="home page image">
+    </main>
+</body>
+</html>
