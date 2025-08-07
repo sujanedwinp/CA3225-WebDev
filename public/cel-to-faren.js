@@ -15,5 +15,3 @@ function convTemp(type, temp) {
         return "Invalid type"
     }
 }
-
-console.log(convTemp('f', 752))

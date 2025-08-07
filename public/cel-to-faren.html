@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Temperature Convert</title>
+</head>
+<body>
+    <form style="justify-content: center;" id="con-temp">
+        <div>
+            <label for="num">Enter Number</label>
+            <input type="number" name="num" id="num">
+        </div>
+        <div>
+            <label for="temp">Convert to</label>
+            <select name="temp" id="temp">
+                <option value="c">C</option>
+                <option value="f">F</option>
+            </select>
+        </div>
+        <button type="submit">Convert</button><br>
+        <label id="result"></label>
+    </form>
+
+    <script>
+        document.getElementById("con-temp").addEventListener("submit", function(e){
+            e.preventDefault();
+            num=document.getElementById("num").value;
+            temp_to=document.getElementById("temp").value;
+            result=document.getElementById("result");
+            if(temp_to==='c'){
+                result.innerHTML=(num - 32)*(5/9)+" °C";
+            } else if(temp_to==='f'){
+                result.innerText=num*(9/5) + (32)+" °F";
+            } else {
+                result.innerText="";
+            }
+        });
+    </script>
+</body>
+</html>

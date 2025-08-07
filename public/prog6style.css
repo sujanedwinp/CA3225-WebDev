@@ -1,10 +1,21 @@
 body{
     text-align: center;
+    background-color: black;
+    color: white;
 }
 h1{
     color: red
 }
-.big-text{
-    font-size: 50px;
+h1:hover{
     color: blue;
+    font-size: 100px;
 }
+.big-text{
+    color: blue;
+    font-size: 50px;
+}
+.big-text:hover{
+    color: red;
+    font-size: 100px;
+}
+
