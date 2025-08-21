@@ -9,6 +9,12 @@
             color: blue;
             font-family: Arial;
         }
+        p.center{
+            color:red
+        }
+        h1#center{
+            color:blue
+        }
     </style>
 
     <!-- External CSS -->
@@ -24,6 +30,14 @@
 
 <!-- External CSS -->
 <div class="external-box">Content - External CSS</div>
+<p class="center">Hello</p>
+<h1 id="center" tabindex="0" onfocus="changeFunction()">hello</h1>
 
+<script>
+    function changeFunction(){
+        let ext_box=document.getElementsByClassName("external-box")[0];
+        ext_box.style.color="red";
+    }
+</script>
 </body>
 </html>

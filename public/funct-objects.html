@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions and Objects</title>
+</head>
+<body>
+
+<h1>JavaScript Functions and Objects</h1>
+<p id="greeting"></p>
+
+<script>
+    const user = {
+        firstName: "John",
+        lastName: "Pooja",
+        role: "Unemployed"
+    };
+
+    function createGreeting(person) {
+        return "Hello, " + person.firstName + " " + person.lastName + "! You are a " + person.role + ".";
+    }
+
+    const greetingMessage = createGreeting(user);
+
+    document.getElementById("greeting").innerHTML = greetingMessage;
+</script>
+
+</body>
+</html>

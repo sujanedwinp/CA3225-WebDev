@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrays and Built-in Objects</title>
+</head>
+<body>
+
+    <h1>Fruits Sale:</h1>
+    <ul id="fruit-list"></ul>
+
+    <h2>On:</h2>
+    <p id="datetime"></p>
+
+    <script>
+        const fruits = ["Apple", "Pineapple", "Orange", "Mango"];
+        const fruitListElement = document.getElementById("fruit-list");
+
+        let listContent = "";
+        for (let fruit of fruits) {
+            listContent += "<li>" + fruit + "</li>";
+        }
+        fruitListElement.innerHTML = listContent;
+
+        const now = new Date();
+        document.getElementById("datetime").innerHTML = now.toLocaleString();
+    </script>
+
+</body>
+</html>
