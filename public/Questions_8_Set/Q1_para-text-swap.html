@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Swap</title>
+</head>
+<body>
+    <h1>Swap Para</h1>
+    <p id="p1">Hello</p>
+    <p id="p2">World!</p>
+    <button onclick="pswap()">Swap</button>
+    <script>
+        function getEBId(id_name){
+            return document.getElementById(id_name)
+        }
+        function pswap(){
+            let p1=getEBId("p1");
+            let p2=getEBId("p2");
+            // Destructuring Swap, Swapping using 2 Variables
+            [p1.innerHTML, p2.innerHTML]=[p2.innerHTML, p1.innerHTML];
+        }
+    </script>
+</body>
+</html>

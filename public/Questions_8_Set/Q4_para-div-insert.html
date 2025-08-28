@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Para Div</title>
+</head>
+<body>
+    <h1>Para insert in Div</h1>
+    <div id="paradiv">
+    </div>
+    <button onclick="insertpara()">Insert para</button>
+    <script>
+        function insertpara(){
+            let para=document.createElement("p");
+            para.innerText="Paragraph Tag";
+            document.getElementById("paradiv").appendChild(para)
+        }
+    </script>
+</body>
+</html>

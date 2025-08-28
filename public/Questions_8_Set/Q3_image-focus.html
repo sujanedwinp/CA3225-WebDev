@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Focus</title>
+</head>
+<body>
+    <h1>Image Over and Off</h1>
+    <img id="img" src="./off-focus-img.png" alt="off focus" width="150"
+        onmouseover="mouseover()"
+        onmouseout="mouseout()"
+    >
+    <script>
+        function mouseover(){
+            document.getElementById("img").src="./hover-img.png";
+        }
+        function mouseout(){
+            document.getElementById("img").src="./off-focus-img.png";
+        }
+    </script>
+</body>
+</html>

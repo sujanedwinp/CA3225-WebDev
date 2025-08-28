@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Cal</title>
+</head>
+<body>
+    <h1>Basic Calculator</h1>
+    <input type="number" name="num1" id="n1" placeholder="n1">
+    <input type="number" name="num2" id="n2" placeholder="n2">
+    <button onclick="cal(true)">Add</button>
+    <button onclick="cal(false)">Sub</button>
+    <p id="result"></p>
+    <script>
+        function getEBId(id_name){
+            return document.getElementById(id_name)
+        }
+        function cal(calmode){
+            let n1=parseFloat(getEBId("n1").value);
+            let n2=parseFloat(getEBId("n2").value);
+            let res;
+            if(calmode){
+                res=n1+n2;
+            }else{
+                res=n1-n2
+            }
+            getEBId("result").innerText="Result "+res;
+        }
+    </script>
+</body>
+</html>
