@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CoffeeCo - Job Application</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #000;
+      background-image: url("form-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height:200vh;
+      width:98vw;
+    }
+
+    header {
+      font-family: 'Courier New', monospace;
+      font-size: 30px;
+    }
+
+    .main {
+      width: 90%;
+      margin: 20px auto 0;
+      padding: 20px;
+      border: 4px solid #6F4E37;
+      border-radius: 30px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .horizon-align {
+      text-align: center;
+    }
+
+    input:valid, textarea:valid, select:valid {
+      border: 2px solid green;
+      background: #f6fff6;
+    }
+
+    input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+      border: 2px solid darkred;
+      box-shadow: 0 0 5px darkred;
+    }
+
+    .form-bg {
+      background: #F2E9DC;
+      padding: 1% 15%;
+      border-radius: 18px;
+    }
+
+    .brown-color {
+      color: #6F4E37;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+
+    .black-bottom-line {
+      padding-bottom: 20px;
+      border-bottom: 4px solid #000;
+    }
+
+    .label-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .inputs-block {
+      width: 250px;
+      padding-left: 40px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .full-width-input {
+      width: 100%;
+      padding-left: 40px;
+      margin-bottom: 15px;
+    }
+
+    .full-width-input .label-name {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .full-width-input input,
+    .full-width-input textarea,
+    .full-width-input select {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #6F4E37;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .submit-btn {
+      background: #6F4E37;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #5a3f2e;
+    }
+
+    .position-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 15px 0;
+    }
+
+    .position-option {
+      background: #fff;
+      border: 2px solid #6F4E37;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .position-option:hover {
+      background: #6F4E37;
+      color: #fff;
+    }
+
+    .position-option.selected {
+      background: #6F4E37;
+      color: #fff;
+    }
+
+    .file-upload {
+      border: 2px dashed #6F4E37;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .file-upload:hover {
+      background: #f0f0f0;
+      border-color: #5a3f2e;
+    }
+  </style>
+</head>
+
+<body>
+<main class="main">
+  <div class="form-bg">
+    <header class="center brown-color black-bottom-line">
+      <h1>CoffeeCo</h1>
+    </header>
+    
+    <form>
+      <div class="black-bottom-line horizon-align">
+        <h2 style="font-size: 28px;">Join our <span class="brown-color">coffee</span> family.<br>Brew your future with us.</h2>
+      </div>
+      
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">Tell us about <span class="brown-color">yourself</span></h2>
+        <div class="inputs-block">
+          <label for="name" class="label-name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="inputs-block">
+          <label for="age" class="label-name">Age:</label>
+          <input type="number" id="age" name="age" min="18" max="70" style="padding-left: 120px;">
+        </div>
+        <div class="inputs-block">
+          <label for="email" class="label-name">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="inputs-block">
+          <label for="phone" class="label-name">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+      
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">What <span class="brown-color">position</span> interests you?</h2>
+        <div class="position-options">
+          <div class="position-option" data-position="barista">Barista</div>
+          <div class="position-option" data-position="waiter">Waiter/Server</div>
+          <div class="position-option" data-position="supplier">Supplier</div>
+          <div class="position-option" data-position="manager">Manager</div>
+          <div class="position-option" data-position="kitchen">Kitchen Staff</div>
+          <div class="position-option" data-position="other">Other</div>
+        </div>
+        <input type="hidden" id="selected-position" name="position" required>
+      </div>
+      
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">Your <span class="brown-color">experience</span> matters</h2>
+        <div class="full-width-input">
+          <label for="experience" class="label-name">Previous Experience:</label>
+          <textarea id="experience" name="experience" rows="4" placeholder="Tell us about your relevant work experience..."></textarea>
+        </div>
+        <div class="full-width-input">
+          <label for="skills" class="label-name">Skills & Certifications:</label>
+          <textarea id="skills" name="skills" rows="3" placeholder="Coffee brewing, customer service, food safety, etc..."></textarea>
+        </div>
+      </div>
+      
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">Let's see your <span class="brown-color">face</span></h2>
+        <div class="full-width-input">
+          <label for="imagePic" class="label-name">Profile Picture:</label>
+          <div class="file-upload" onclick="document.getElementById('imagePic').click()">
+            <input type="file" id="imagePic" name="pic" accept="image/*" style="display: none;">
+            <p>Drop your pic here.</p>
+            <p style="font-size: 14px; color: #666;">JPG, PNG, or GIF (Max 5MB)</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">Where can we <span class="brown-color">find</span> you?</h2>
+        <div class="full-width-input">
+          <label for="address" class="label-name">Address:</label>
+          <textarea id="address" name="address" rows="3" placeholder="Your full address..."></textarea>
+        </div>
+      </div>
+      
+      <div class="horizon-align" style="padding:20px;">
+        <h2>Ready to brew?</h2>
+        <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const nameInput = document.getElementById("name");
+    const ageInput = document.getElementById("age");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const positionOptions = document.querySelectorAll(".position-option");
+    const selectedPositionInput = document.getElementById("selected-position");
+    const fileInput = document.getElementById("imagePic");
+
+    // Position selection
+    positionOptions.forEach(option => {
+      option.addEventListener("click", () => {
+        positionOptions.forEach(opt => opt.classList.remove("selected"));
+        option.classList.add("selected");
+        selectedPositionInput.value = option.dataset.position;
+      });
+    });
+
+    // Name validation
+    nameInput.addEventListener("input", () => {
+      nameInput.value = nameInput.value.replace(/\d/g, "");
+      const nameValue = nameInput.value.trim();
+      const onlyLetters = /^[A-Za-z\s]+$/;
+
+      if (nameValue === "") {
+        nameInput.setCustomValidity("Name cannot be empty.");
+      } else if (nameValue.length < 3) {
+        nameInput.setCustomValidity("Name must be at least 3 characters long.");
+      } else if (!onlyLetters.test(nameValue)) {
+        nameInput.setCustomValidity("Only letters and spaces allowed!");
+      } else {
+        nameInput.setCustomValidity("");
+      }
+      nameInput.reportValidity();
+    });
+
+    // Age validation
+    ageInput.addEventListener("input", () => {
+      const age = parseInt(ageInput.value);
+      if (age < 16) {
+        ageInput.setCustomValidity("Must be at least 16 years old.");
+      } else if (age > 100) {
+        ageInput.setCustomValidity("Please enter a valid age.");
+      } else {
+        ageInput.setCustomValidity("");
+      }
+      ageInput.reportValidity();
+    });
+
+    // Email validation
+    emailInput.addEventListener("input", () => {
+      const emailValue = emailInput.value.trim();
+      const pattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      
+      emailInput.setCustomValidity(!pattern.test(emailValue)
+        ? "Please enter a valid email address."
+        : "");
+      emailInput.reportValidity();
+    });
+
+    // Phone validation
+    phoneInput.addEventListener("input", () => {
+      const phoneValue = phoneInput.value.replace(/\D/g, "");
+      if (phoneValue.length < 10) {
+        phoneInput.setCustomValidity("Phone number must be at least 10 digits.");
+      } else {
+        phoneInput.setCustomValidity("");
+      }
+      phoneInput.reportValidity();
+    });
+
+    // File upload preview
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const fileSize = file.size / 1024 / 1024; // MB
+        if (fileSize > 5) {
+          alert("File size must be less than 5MB");
+          fileInput.value = "";
+          return;
+        }
+        
+        const uploadDiv = fileInput.parentElement;
+        uploadDiv.innerHTML = `
+          <p>✅ ${file.name} uploaded successfully!</p>
+          <p style="font-size: 14px; color: #666;">File size: ${fileSize.toFixed(2)} MB</p>
+        `;
+      }
+    });
+
+    // Form submission
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      if (!selectedPositionInput.value) {
+        alert("Please select a position!");
+        return;
+      }
+      
+      username=document.getElementById("name").value
+      alert(username+" you have successfully applied. Will get back to you.");
+    });
+  });
+</script>
+</body>
+</html>

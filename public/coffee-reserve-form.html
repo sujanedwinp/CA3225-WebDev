@@ -1,37 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>CoffeeCo Reservation</title>
+  <title>CoffeeCo</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #000;
+    }
+
+    header {
+      font-family: 'Courier New', monospace;
+      font-size: 30px;
+    }
+
+    .main {
+      width: 90%;
+      margin: 20px auto 0;
+      padding: 20px;
+      border: 4px solid #6F4E37;
+      border-radius: 30px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .horizon-align {
+      text-align: center;
+    }
+
+    input:valid {
+      border: 2px solid green;
+      background: #f6fff6;
+    }
+
+    input:focus:invalid {
+      border: 2px solid darkred;
+      box-shadow: 0 0 5px darkred;
+    }
+
+    .form-bg {
+      background: #F2E9DC;
+      padding: 1% 15%;
+      border-radius: 18px;
+    }
+
+    .brown-color {
+      color: #6F4E37;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+
+    .black-bottom-line {
+      padding-bottom: 20px;
+      border-bottom: 4px solid #000;
+    }
+
+    .label-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .inputs-block {
+      width: 250px;
+      padding-left: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .submit-btn {
+      background: #6F4E37;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
+
 <body>
+<main class="main">
+  <div class="form-bg">
+    <header class="center brown-color black-bottom-line">
+      <h1>CoffeeCo</h1>
+    </header>
+    <form>
+      <div class="black-bottom-line horizon-align">
+        <h2 style="font-size: 28px;">Life is toooooo short to enjoy <span class="brown-color">coffee</span>.<br>Have one today.</h2>
+      </div>
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">Har coffee pe likha hain peene vaale ka <span class="brown-color">naam</span>.</h2>
+        <div class="inputs-block">
+          <label for="name" class="label-name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="inputs-block">
+          <label for="email" class="label-name">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="inputs-block">
+          <label for="phno" class="label-name">Phno:</label>
+          <input type="text" id="phno" name="phone" required>
+        </div>
+      </div>
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">So when's the sacrifice of the <span class="brown-color">bean</span>?</h2>
+        <div class="inputs-block">
+          <label for="date" class="label-name">Date:</label>
+          <input type="date" id="date" name="date" style="width:180px;" required>
+        </div>
+        <div class="inputs-block">
+          <label for="time" class="label-name">Time:</label>
+          <input type="time" id="time" name="time" style="width:180px;" required>
+        </div>
+      </div>
+      <div class="horizon-align" style="padding:2px;">
+        <h2>Done?</h2>
+        <button type="submit" class="submit-btn">KEEP IT HOT</button>
+      </div>
+    </form>
+  </div>
+</main>
 
-<h1>CoffeeCo</h1>
-<h2>Life is toooooo short to enjoy coffee. Have one today.</h2>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phno");
+    const dateInput = document.getElementById("date");
+    const timeInput = document.getElementById("time");
 
-<form>
-  <!-- Name -->
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name"><br><br>
+    nameInput.addEventListener("invalid", () => {
+      if (nameInput.value.trim() === "") {
+        nameInput.setCustomValidity("Name cannot be empty.");
+      }
+    });
+    nameInput.addEventListener("input", ()=>{
+      nameInput.value = nameInput.value.replace(/\d/g, "");
 
-  <!-- Phone -->
-  <label for="phno">Phno:</label>
-  <input type="text" id="phno" name="phone"><br><br>
+      const nameValue = nameInput.value.trim();
+      const onlyLetters = /^[A-Za-z\s]+$/;
 
-  <!-- Date -->
-  <label for="date">Date:</label>
-  <input type="date" id="date" name="date"><br><br>
+      if (nameValue === "") {
+        nameInput.setCustomValidity("Name cannot be empty.");
+      } else if (nameValue.length < 3) {
+        nameInput.setCustomValidity("Name must be at least 3 characters long.");
+      } else if (!onlyLetters.test(nameValue)){
+        nameInput.setCustomValidity("Only Letters and Spaces here!");
+      } else {
+        nameInput.setCustomValidity("")
+      }
 
-  <!-- Time -->
-  <label for="time">Time:</label>
-  <input type="time" id="time" name="time"><br><br>
+      nameInput.reportValidity();
+    })
 
-  <!-- Number of People -->
-  <label for="people">Number of People:</label>
-  <input type="number" id="people" name="people" min="1"><br><br>
+    emailInput.addEventListener("invalid", () => {
+      if (nameInput.value.trim() === "") {
+        nameInput.setCustomValidity("Email cannot be empty.");
+      }
+    });
+    emailInput.addEventListener("input", ()=>{
+      emailInput.value = emailInput.value.replace(/\d/g, "");
 
-  <!-- Submit Button -->
-  <button type="submit">KEEP IT HOT</button>
-</form>
+      const emailValue = emailInput.value.trim();
+      const pattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      
+      emailInput.setCustomValidity(!pattern.test(emailInput.value.trim())
+            ? "Please enter a valid email."
+            : "");
 
+      emailInput.reportValidity();
+    })
+  });
+</script>
 </body>
 </html>

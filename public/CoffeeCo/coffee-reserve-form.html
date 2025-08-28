@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CoffeeCo</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #000;
+      background-image: url("form-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height:96vh;
+      width:98vw;
+    }
+
+    header {
+      font-family: 'Courier New', monospace;
+      font-size: 30px;
+    }
+
+    .main {
+      width: 90%;
+      margin: 20px auto 0;
+      padding: 20px;
+      border: 4px solid #6F4E37;
+      border-radius: 30px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .horizon-align {
+      text-align: center;
+    }
+
+    input:valid {
+      border: 2px solid green;
+      background: #f6fff6;
+    }
+
+    input:focus:invalid {
+      border: 2px solid darkred;
+      box-shadow: 0 0 5px darkred;
+    }
+
+    .form-bg {
+      background: #F2E9DC;
+      padding: 1% 15%;
+      border-radius: 18px;
+    }
+
+    .brown-color {
+      color: #6F4E37;
+    }
+
+    .black-bottom-line {
+      padding-bottom: 20px;
+      border-bottom: 4px solid #000;
+    }
+
+    .label-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .inputs-block {
+      width: 250px;
+      padding-left: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .submit-btn {
+      background: #6F4E37;
+      color: #fff;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+<main class="main">
+  <div class="form-bg">
+    <header class="center brown-color black-bottom-line">
+      <h1>CoffeeCo</h1>
+    </header>
+    <form id="form-id">
+      <div class="black-bottom-line horizon-align">
+        <h2 style="font-size: 28px;">Life is toooooo short to enjoy <span class="brown-color">coffee</span>.<br>Have one today.</h2>
+      </div>
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">Har coffee pe likha hain peene vaale ka <span class="brown-color">naam</span>.</h2>
+        <div class="inputs-block">
+          <label for="name" class="label-name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="inputs-block">
+          <label for="email" class="label-name">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="inputs-block">
+          <label for="phno" class="label-name">Phno:</label>
+          <input type="text" id="phno" name="phone" required>
+        </div>
+      </div>
+      <div class="black-bottom-line">
+        <h2 class="horizon-align">So when's the sacrifice of the <span class="brown-color">bean</span>?</h2>
+        <div class="inputs-block">
+          <label for="date" class="label-name">Date:</label>
+          <input type="date" id="date" name="date" style="width:180px;" required>
+        </div>
+        <div class="inputs-block">
+          <label for="time" class="label-name">Time:</label>
+          <input type="time" id="time" name="time" style="width:180px;" required>
+        </div>
+      </div>
+      <div class="horizon-align" style="padding:2px;">
+        <h2>Done?</h2>
+        <button type="submit" class="submit-btn">KEEP IT HOT</button>
+      </div>
+    </form>
+  </div>
+</main>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phno");
+    const dateInput = document.getElementById("date");
+    const timeInput = document.getElementById("time");
+
+    // NAME
+    nameInput.addEventListener("invalid", () => {
+      if (nameInput.value.trim() === "") {
+        nameInput.setCustomValidity("Name cannot be empty.");
+      }
+    });
+    nameInput.addEventListener("input", () => {
+      nameInput.value = nameInput.value.replace(/\d/g, ""); // block digits
+
+      const nameValue = nameInput.value.trim();
+      const onlyLetters = /^[A-Za-z\s]+$/;
+
+      if (nameValue === "") {
+        nameInput.setCustomValidity("Name cannot be empty.");
+      } else if (nameValue.length < 3) {
+        nameInput.setCustomValidity("Name must be at least 3 characters long.");
+      } else if (!onlyLetters.test(nameValue)) {
+        nameInput.setCustomValidity("Only Letters and Spaces here!");
+      } else {
+        nameInput.setCustomValidity("");
+      }
+      nameInput.reportValidity();
+    });
+
+    // EMAIL
+    emailInput.addEventListener("invalid", () => {
+      if (emailInput.value.trim() === "") {
+        emailInput.setCustomValidity("Email cannot be empty.");
+      }
+    });
+    emailInput.addEventListener("input", () => {
+      const pattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      emailInput.setCustomValidity(
+        !pattern.test(emailInput.value.trim())
+          ? "Please enter a valid email."
+          : ""
+      );
+      emailInput.reportValidity();
+    });
+
+    // PHONE
+    phoneInput.addEventListener("invalid", () => {
+      if (phoneInput.value.trim() === "") {
+        phoneInput.setCustomValidity("Phone Number cannot be empty.");
+      }
+    });
+    phoneInput.addEventListener("input", () => {
+      phoneInput.value = phoneInput.value.replace(/\D/g, ""); // digits only
+      phoneInput.setCustomValidity(
+        phoneInput.value.length !== 10
+          ? "Phone number must be exactly 10 digits."
+          : ""
+      );
+      phoneInput.reportValidity();
+    });
+
+    // DATE
+    dateInput.addEventListener("invalid", () => {
+      if (dateInput.value.trim() === "") {
+        dateInput.setCustomValidity("Date cannot be empty.");
+      }
+    });
+    dateInput.addEventListener("input", () => {
+      const today = new Date();
+      today.setHours(0,0,0,0); // ignore time
+      const selectDate = new Date(dateInput.value);
+      dateInput.setCustomValidity(
+        selectDate < today ? "Back to the future, aint possible." : ""
+      );
+      dateInput.reportValidity();
+    });
+
+    // TIME
+    timeInput.addEventListener("invalid", () => {
+      if (timeInput.value.trim() === "") {
+        timeInput.setCustomValidity("Time cannot be empty.");
+      }
+    });
+    timeInput.addEventListener("input", () => {
+      timeInput.setCustomValidity(
+        timeInput.value !== "" ? "" : "Time cannot be empty"
+      );
+      timeInput.reportValidity();
+    });
+  });
+
+  // SUBMIT HANDLER
+  document.getElementById("form-id").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent reload
+    const userName = document.getElementById("name").value.trim();
+    alert(userName + ", your reservation is Confirmed!");
+  });
+</script>
+
+</body>
+</html>
