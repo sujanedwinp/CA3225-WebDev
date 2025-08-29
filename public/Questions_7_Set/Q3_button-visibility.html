@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Visibility</title>
+    </head>
+    <body>
+        <p id="txt">Hello World!</p>
+        <button onclick="isVisibile(false)">Hide</button>
+        <button onclick="isVisibile(true)">Show</button>
+        <script>
+            function isVisibile(state){
+                document.getElementById("txt").style.display= (state==true)?"block":"none";
+            }
+        </script>
+    </body>
+</html>

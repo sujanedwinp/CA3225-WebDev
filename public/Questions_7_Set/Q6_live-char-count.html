@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Live Char Count</title>
+    </head>
+    <body>
+        <input id="box" onkeyup="count()" type="text">
+        <p id="count">0</p>
+        <script>
+            function count(){
+                document.getElementById("count").innerText=document.getElementById("box").value.length;
+            }
+        </script>
+    </body>
+</html>

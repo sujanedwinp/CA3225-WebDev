@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Field Validation</title>
+    </head>
+    <body>
+        <form onsubmit="validate()">
+            <input id="t" type="text">
+            <input type="submit">
+        </form>
+            <script>
+            function validate(){
+                if(document.getElementById("t").value==""){
+                    alert("Field required");
+                    return;
+                }
+            return;
+            }
+            </script>
+    </body>
+</html>
