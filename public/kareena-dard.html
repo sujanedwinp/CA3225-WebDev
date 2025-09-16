@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Web Mini Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --link: #444;
+    --link-hover: #007acc;
+    --accent: #ffffff;
+    --main-text: #222;
+    --gray: #666;
+    --glass: rgba(255, 255, 255, 0.8);
+    --pg7-bg: rgba(230, 240, 255, 0.95);
+    --bg-gradient: linear-gradient(to right, #e0eafc, #cfdef3);
+  }
+    
+    html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-gradient);
+    color: var(--main-text);
+    padding-bottom: 2rem;
+  }
+    
+    .navbar {
+    display: flex;
+    gap: 1.7rem;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    background: var(--nav-bg);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-radius: 0 0 14px 14px;
+    backdrop-filter: blur(5px);
+  }
+    .navbar a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+    .navbar a.active, .navbar a:hover {
+    background: var(--link-hover);
+    color: #fff;
+  }
+    .section { display: none; }
+    .section.active {
+    display: block;
+    margin: 4rem auto 2rem;
+    padding: 0 8vw;
+  }
+    .home-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30vh;
+    margin-bottom: 1.5rem;
+    color: #333;
+     text-shadow: 0 2px 10px rgba(255,255,255,0.18);
+    }
+    .home-details {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gray);
+  }
+    .programs-title, .module-title {
+      text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+      margin-top: 3vh;
+      text-shadow: 0 2px 12px rgba(255,255,255,0.1);
+    }
+    .program-list {
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.2rem;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    }
+    .program-link, .module-link, button.action-button {
+      .program-link {
+    background: var(--glass);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1rem 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    }
+    .program-link:hover, .program-link.active,
+    .module-link:hover, .module-link.active,
+    button.action-button:hover {
+      background: var(--link-hover);
+    color: white;
+    }
+    .program-text-title,
+    .module-text-title {
+      text-align: center;
+    font-size: 1.7rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    }
+    .program-text, .module-text {
+      max-width: 600px;
+    margin: 0 auto;
+    background: var(--glass);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    /* Profile photo center */
+    .profile-pic {
+      display: block;
+      margin: 2.2rem auto 0.6rem;
+      width: 160px; height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      box-shadow: 0 3px 16px rgba(44,80,168,0.11);
+      background: #eee;
+    }
+    h2{
+        font-size: xx-large;
+    }
+    .profile-details {
+      text-align: center;
+      font-size: 1.12rem;
+      color: var(--main-text);
+      background: var(--glass);
+      border-radius: 8px;
+      margin: 0.6rem auto 0;
+      max-width: 420px;
+      padding: 1.2rem 0.8rem;
+      box-shadow: 0 2px 13px rgba(44,80,168,0.07);
+    }
+    /* Forms Styling */
+    form {
+    background: var(--glass);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 420px;
+    margin: 2rem auto;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    color: #333;
+  }
+    form label { text-align:left; font-weight: 500; }
+    form input, form textarea, form select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+    form input[type="submit"], form button {
+    background: var(--link-hover);
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  form input[type="submit"]:hover,
+  form button:hover {
+    background: #005a99;
+  }
+    /* Timetable Table */
+    table.timetable-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+    .timetable-table th,
+  .timetable-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  .timetable-table th {
+    background: #f3f6fa;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .timetable-table tr:last-child td {
+    border-bottom: none;
+  }
+
+    
+    .leap-result, .celsius-result, .discount-result {
+      background: var(--glass); border-radius: 8px; color: var(--accent); font-weight: 600; padding: 1rem; margin: 1rem auto; text-align:center;
+      max-width:260px;
+      user-select: text;
+    }
+    /* Program 7 special background */
+    #program-page-7 .program-text {
+      background: var(--pg7-bg);
+      white-space: normal;
+    }
+    #program-page-7 button.home-link {
+      background: #383636;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.7rem 1.6rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      margin-top: 1.3rem;
+      outline: none;
+      user-select: none;
+    }
+    #program-page-7 button.home-link:hover {
+      background: #383636;
+    }
+    /* Back button */
+    button.back-button {
+    display: block;
+    margin: 2rem auto 0;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.6rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button.back-button:hover {
+    background: #555;
+  }
+    /* Responsive */
+    @media (max-width:800px){
+      .section.active { padding: 0 3vw; }
+      .program-list{grid-template-columns:1fr 1fr;}
+    }
+    @media (max-width:600px){
+      .section.active { padding: 0 1vw; }
+      .program-list{grid-template-columns:1fr;}
+      .program-link, .module-link, button.action-button {padding:1.2rem 0.6rem}
+      .home-title{font-size:1.5rem;}
+      .timetable-table th,
+      .timetable-table td {padding: 0.5rem;}
+    }
+  </style>
+  <link rel="stylesheet" href="excss.css"
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="nav-link active" id="nav-home">Home</a>
+    <a href="#" class="nav-link" id="nav-programs">Programs</a>
+  </nav>
+  <!-- Home Page -->
+  <div class="section active" id="page-home">
+    <div class="home-title">web mini project</div>
+    <div class="home-details">Kareena Kataria<br>242bca33</div>
+  </div>
+  <!-- Programs - main links -->
+  <div class="section" id="page-programs">
+    <div class="programs-title">Programs</div>
+    <div class="program-list">
+      <a class="program-link" href="#" data-program="1">Time Table</a>
+      <a class="program-link" href="#" data-program="2">Profile Page</a>
+      <a class="program-link" href="#" data-program="3">Reservation Form</a>
+      <a class="program-link" href="#" data-program="4">Student Application</a>
+      <a class="program-link" href="#" data-program="5">Home <br>Page</a>
+      <a class="program-link" href="#" data-program="6">Inline, Internal and External</a>
+      <a class="program-link" href="#" data-program="7">Embedded Style Sheets</a>
+      <a class="program-link" href="#" data-program="8">Leap<br> Year</a>
+      <a class="program-link" href="#" data-program="9">Celsius to Fahrenheit</a>
+    </div>
+    <div style="text-align:center;">
+      <button class="module-link" id="module-link">Module</button>
+    </div>
+  </div>
+  <!-- Program 1: Time Table -->
+  <div class="section" id="program-page-1">
+    <div class="program-text-title">University Timetable</div>
+    <table class="timetable-table">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>10-11 AM</th>
+          <th>11-12 PM</th>
+          <th>12-1 PM</th>
+          <th>2-3 PM</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Monday</td><td>hindi</td><td>-</td><td>dbms</td><td>English</td></tr>
+        <tr><td>Tuesday</td><td>hindi</td><td>-</td><td>english</td><td>ai</td></tr>
+        <tr><td>Wednesday</td><td>hindi</td><td>dbms Lab</td><td>English</td><td>coa</td></tr>
+        <tr><td>Thursday</td><td>web</td><td>coa Lab</td><td>-</td><td>web</td></tr>
+      </tbody>
+    </table>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 2: Profile Page -->
+  <div class="section" id="program-page-2">
+    <div class="program-text-title">Random Profile</div>
+    <img src="data:image/png;base64,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" class="profile-pic" alt="Profile Picture" />
+    <div class="profile-details">
+      <b>Name:</b> Kareena Kataria<br />
+      <b>Age:</b> 19<br />
+      <b>Email:</b> kareenakataria7@gmail.com<br />
+      <b>Hobbies:</b> art,reading</br>
+    </div>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 3: Reservation Form -->
+  <div class="section" id="program-page-3">
+    <div class="program-text-title">Restaurant Reservation</div>
+    <form id="reservation-form" autocomplete="off">
+      <label>Name: <input type="text" name="name" required /></label>
+      <label>Email: <input type="email" name="email" required /></label>
+      <label>Date: <input type="date" name="date" required /></label>
+      <label>Time: <input type="time" name="time" required /></label>
+      <label>People: <input type="number" name="people" required min="1" max="20" /></label>
+      <input type="submit" value="Reserve Table" />
+      <div id="reservation-success"></div>
+    </form>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 4: Student Application -->
+  <div class="section" id="program-page-4">
+    <div class="program-text-title">Student Application Form</div>
+    <form id="student-form" autocomplete="off">
+      <label>Full Name: <input type="text" name="studentname" required /></label>
+      <label>Email: <input type="email" name="studentemail" required /></label>
+      <label>Course:
+        <select name="course" required>
+          <option value="">--Select Course--</option>
+          <option>Bachelor of Science</option>
+          <option>Bachelor of Arts</option>
+          <option>Bachelor of Computer</option>
+        </select>
+      </label>
+      <label>Anything you want to say? <br />
+        <textarea name="reason" rows="3" required></textarea>
+      </label>
+      <input type="submit" value="Submit Application" />
+      <div id="student-success"></div>
+    </form>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 6: Static Text -->
+  <div class="section" id="program-page-6">
+    <div class="program-text-title">About inline, internal and external</div>
+    <div class="program-text" style="white-space: normal; text-align:left;">
+      <p style="color:red"><b>Inline CSS:</b> Styles elements using style attribute.</p>
+      <p> <h2><b>Internal CSS:</b> Styles written inside a &lt;style&gt; tag in the HTML head section.</h2></p>
+      <p><h6><b>External CSS:</b> Styles placed in separate CSS files linked to the HTML page.</h6></p>
+    </div>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 7: Static Text with background -->
+  <div class="section" id="program-page-7">
+    <div class="program-text-title">Embedded Style Sheets</div>
+    <div class="program-text" style="background: var(--pg7-bg); white-space: normal;">
+      Embedded style sheets are defined within the &lt;style&gt; tag in the HTML head. They're useful for styling a single page but not recommended for large projects.
+    </div>
+    <button class="home-link">Go to Home</button>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 8: Leap Year Checker -->
+  <div class="section" id="program-page-8">
+    <div class="program-text-title">Leap Year Checker</div>
+    <form id="leap-form" autocomplete="off">
+      <label>Enter a year: <input type="number" id="leap-year-input" required min="1" max="9999" placeholder="e.g. 2024" /></label>
+      <button type="submit">Check Year</button>
+      <div id="leap-result" class="leap-result" style="display:none;"></div>
+    </form>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Program 9: Celsius to Fahrenheit -->
+  <div class="section" id="program-page-9">
+    <div class="program-text-title">Celsius to Fahrenheit</div>
+    <form id="celsius-form" autocomplete="off">
+      <label>
+        Enter Celsius: <input type="number" id="celsius-input" required placeholder="e.g. 25" />
+      </label>
+      <button type="submit">Convert</button>
+      <div id="celsius-result" class="celsius-result" style="display:none;"></div>
+    </form>
+    <button class="back-button">Back</button>
+  </div>
+  <!-- Module Page with discount form -->
+  <div class="section" id="module-page">
+    <div class="module-title">Discount Calculator</div>
+    <form id="discount-form" autocomplete="off" style="max-width:370px; margin: 2rem auto;">
+      <label>Bill Amount: <input id="bill-input" type="number" min="0" step="0.01" required /></label>
+      <label>Discount Percentage: <input id="discount-percent-input" type="number" min="0" max="100" step="0.1" required /></label>
+      <button type="submit" class="action-button">Calculate</button>
+    </form>
+    <div id="discount-result" class="discount-result" style="display:none;"></div>
+    <button class="back-button">Back</button>
+  </div>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll(".section").forEach((sec) => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      document.querySelectorAll(".program-link, .module-link, .navbar a").forEach((el) => el.classList.remove("active"));
+      if (id === "page-home") document.getElementById("nav-home").classList.add("active");
+      else if (id === "page-programs") document.getElementById("nav-programs").classList.add("active");
+    }
+    // Navbar links
+    document.getElementById("nav-home").onclick = function (e) {
+      e.preventDefault();
+      showSection("page-home");
+    };
+    document.getElementById("nav-programs").onclick = function (e) {
+      e.preventDefault();
+      showSection("page-programs");
+    };
+    // Program links
+    document.querySelectorAll(".program-link").forEach((link) => {
+      link.onclick = function (e) {
+        e.preventDefault();
+        const pg = this.dataset.program;
+        if (pg === "5") {
+          showSection("page-home");
+          document.getElementById("nav-home").classList.add("active");
+        } else {
+          showSection("program-page-" + pg);
+          this.classList.add("active");
+        }
+      };
+    });
+    // Module button
+    document.getElementById("module-link").onclick = function () {
+      showSection("module-page");
+      this.classList.add("active");
+    };
+    // Back Buttons (all content pages except programs/home)
+    document.querySelectorAll("button.back-button").forEach((btn) =>
+      btn.addEventListener("click", () => {
+        showSection("page-programs");
+      })
+    );
+    // Special home link button in program 7 content
+    document.querySelector("#program-page-7 button.home-link").addEventListener("click", () => {
+      showSection("page-home");
+      document.getElementById("nav-home").classList.add("active");
+    });
+
+    // Reservation form feedback - program 3
+    document.getElementById("reservation-form").onsubmit = function (e) {
+      e.preventDefault();
+      const success = document.getElementById("reservation-success");
+      success.textContent = "Reservation submitted!";
+      this.reset();
+      setTimeout(() => (success.textContent = ""), 2500);
+    };
+    // Student Application form feedback - program 4
+    document.getElementById("student-form").onsubmit = function (e) {
+      e.preventDefault();
+      const success = document.getElementById("student-success");
+      success.textContent = "Application submitted!";
+      this.reset();
+      setTimeout(() => (success.textContent = ""), 2500);
+    };
+    // Leap year form - program 8
+    document.getElementById("leap-form").onsubmit = function (e) {
+      e.preventDefault();
+      var year = parseInt(document.getElementById("leap-year-input").value);
+      var msg = "";
+      if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) msg = year + " is a Leap Year!";
+      else msg = year + " is NOT a Leap Year.";
+      var result = document.getElementById("leap-result");
+      result.textContent = msg;
+      result.style.display = "block";
+    };
+    // Celsius to Fahrenheit form - program 9
+    document.getElementById("celsius-form").onsubmit = function (e) {
+      e.preventDefault();
+      var c = parseFloat(document.getElementById("celsius-input").value);
+      var f = (c * 9) / 5 + 32;
+      var msg = `${c}°C is ${f.toFixed(2)}°F`;
+      var result = document.getElementById("celsius-result");
+      result.textContent = msg;
+      result.style.display = "block";
+    };
+    // Module discount calculator form
+    document.getElementById("discount-form").onsubmit = function (e) {
+      e.preventDefault();
+      const bill = parseFloat(document.getElementById("bill-input").value);
+      const discountPercent = parseFloat(document.getElementById("discount-percent-input").value);
+      const resultDiv = document.getElementById("discount-result");
+      if (bill >= 0 && discountPercent >= 0 && discountPercent <= 100) {
+        const discountAmount = (bill * discountPercent) / 100;
+        const finalPrice = bill - discountAmount;
+        resultDiv.textContent = `Bill: $${bill.toFixed(2)}, Discount: ${discountPercent}%, Final Price: $${finalPrice.toFixed(2)}`;
+      } else {
+        resultDiv.textContent = "Please enter valid positive numbers for bill and discount (0-100%).";
+      }
+      resultDiv.style.display = "block";
+    };
+  
+  </script>
+</body>
+</html>
