@@ -1,21 +1,12 @@
 .container {
   text-align: center;
   margin-top: 50px;
-  font-family: Arial, sans-serif;
 }
-
-.input-group {
-  margin: 10px 0;
+.input-group{
+  margin: 10px;
 }
-
-input {
-  padding: 5px;
-  margin-left: 10px;
-}
-
 button {
   padding: 8px 15px;
-  margin-top: 10px;
   cursor: pointer;
   background-color: #007bff;
   color: white;
@@ -24,8 +15,6 @@ button {
 }
 
 .result {
-  margin-top: 20px;
-  font-size: 20px;
   font-weight: bold;
   color: green;
 }
