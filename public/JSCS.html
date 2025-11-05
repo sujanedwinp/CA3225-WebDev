@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://syntaxsimplified.com/cheatsheet/Javascript/javascript.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Javascript Cheat Sheet</title>
+        <meta name="author" content="Hoi Kin Poon, Jason">
+        <meta name="description" content="This is a cheat sheet about Javascript programming language. It include every syntax keyword of JS.">
+        <meta name="keywords" content="Javascript,cheat sheet,JS ,tutorial,frontend,web dev">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="Javascript Cheat Sheet">
+        <meta property="og:description" content="An &#39;everything&#39; included Javascript cheat sheet. you can use it as the index page of learning JS, while enjoy the well designed UI">
+        <meta property="og:image" content="/cheatsheet/Javascript/img/og_image.png">
+        <meta property="og:url" content="https://syntaxsimplified.com/cheatsheet/Javascript/javascript.html">
+        <meta property="og:type" content="website">
+
+        <link rel="stylesheet" href="./Javascript Cheat Sheet_files/javascript.css">
+        <script src="./Javascript Cheat Sheet_files/javascript.js"></script>
+        <script async="" src="./Javascript Cheat Sheet_files/js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HJZLH4TLRX');
+        </script>
+    </head>
+    <body data-new-gr-c-s-check-loaded="14.1126.0" data-gr-ext-installed="">
+        <header>
+            <a href="https://syntaxsimplified.com/"> <img src="./Javascript Cheat Sheet_files/icon.png"></a>
+            <a href="https://syntaxsimplified.com/"> <h1>Syntax Simplified</h1></a>
+        </header>
+        
+        <nav></nav>
+
+        <aside>
+            <form id="side_menu">
+                <label for="radio_A" class="side_menu_label" onclick="document.getElementById(&#39;variable_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_A" name="section" type="radio"><span class="side_menu_text">Variable and Data Types</span><span class="radio_overlay"></span>
+                </label> 
+                <label for="radio_B" class="side_menu_label" onclick="document.getElementById(&#39;operator_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_B" name="section" type="radio"><span class="side_menu_text">Operators</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_C" class="side_menu_label" onclick="document.getElementById(&#39;condition_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_C" name="section" type="radio"><span class="side_menu_text">Condition and Loop</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_D" class="side_menu_label" onclick="document.getElementById(&#39;function_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_D" name="section" type="radio"><span class="side_menu_text">Function</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_E" class="side_menu_label" onclick="document.getElementById(&#39;object_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_E" name="section" type="radio"><span class="side_menu_text">Object</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_F" class="side_menu_label" onclick="document.getElementById(&#39;class_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_F" name="section" type="radio"><span class="side_menu_text">Class</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_G" class="side_menu_label" onclick="document.getElementById(&#39;error_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_G" name="section" type="radio"><span class="side_menu_text">Error Handling</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_H" class="side_menu_label" onclick="document.getElementById(&#39;async_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_H" name="section" type="radio"><span class="side_menu_text">Asynchronous</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_I" class="side_menu_label" onclick="document.getElementById(&#39;file_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_I" name="section" type="radio"><span class="side_menu_text">File System</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_J" class="side_menu_label" onclick="document.getElementById(&#39;debug_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_J" name="section" type="radio"><span class="side_menu_text">Debugger</span><span class="radio_overlay"></span>
+                </label>
+            </form>
+        </aside>
+
+        <main>
+            <section id="intro_section">
+                <hgroup id="cheatsheet_title">
+                    <img id="language_icon" src="./Javascript Cheat Sheet_files/Javascript_logo.svg" alt="JS logo">
+                    <h1 id="language_name">Javascript</h1>
+                    <h1 id="sub_title">Cheatsheet</h1>
+                </hgroup>
+            </section>
+
+            <section id="variable_section">
+                <h2 class="section_title">Variable and Data Types</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Hello World</h3>
+                        <p class="chapter_description">Description: Print Hello World.</p>
+                        <div class="chapter_content">
+                            <code><name>console</name>.<func>log</func><ybrk>(</ybrk><str>"Hello World"</str><ybrk>)</ybrk>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Data Type</h3>
+                        <p class="chapter_description">Description: There are 8 types of data in Javascript.</p>
+                        <div class="chapter_content">
+                            <code><h4>1  <u>Number</u></h4></code>
+                            <code><val>150   9.81</val>               <comm>//Decimal</comm></code>
+                            <code><val>2.99e8   1E5   1.23e-3</val>   <comm>//Exponential</comm></code>
+                            <code><val>0b10001101   0B10110011</val>  <comm>//Binary</comm></code>
+                            <code><val>0O552</val>                    <comm>//Octal</comm></code>
+                            <code><val>0xF36A</val>                   <comm>//Hex</comm></code>
+                            <code><val>1_000_000_000</val>            <comm>//Numeric separators</comm></code>
+                            <br><br>
+                            <code><h4>2  <u>String</u></h4></code>
+                            <code><str>"foo"   'boo'</str></code>
+                            <code><str>`Name:</str> <ybrk>${</ybrk><name>myName</name><ybrk>}</ybrk><str>`</str>        <comm>//String Template</comm></code>
+                            <br><br>
+                            <code><h4>3  <u>Boolean</u></h4></code>
+                            <code><type>true   false</type></code>
+                            <br><br>
+                            <code><h4>4  <u>BigInt</u></h4></code>
+                            <code><func>BigInt</func><ybrk>(</ybrk><str>"4262469846813823682736836827368"</str><ybrk>)</ybrk></code>
+                            <code><val>1382438263843</val><type>n</type>   <val>0x5BC294D4E</val><type>n</type></code>
+                        </div>
+                        <div class="chapter_left_content">                            
+                            <code><h4>5  <u>Undefined</u></h4></code>
+                            <code><type>void</type> <val>1</val></code>
+                            <br><br>
+                            <code><h4>6  <u>Null</u></h4></code>
+                            <code><type>null</type></code>
+                        </div>
+                        <div class="chapter_right_content">         
+                            <code><h4>7  <u>Object</u></h4></code>
+                            <code><ybrk>{</ybrk> <name>name:</name><str>"Mary"</str>, <name>score:</name><val>82</val> <ybrk>}</ybrk></code>
+                            <code><ybrk>[ </ybrk><val>2</val>, <val>4</val>, <val>8</val>, <val>16</val><ybrk> ]</ybrk>           <comm>//Array is an object</comm></code>
+                            <br><br>
+                            <code><h4>8  <u>Symbol</u></h4></code>
+                            <code><func>Symbol</func><ybrk>(</ybrk><str>"key"</str><ybrk>)</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Variables &amp; Constants</h3>
+                        <p class="chapter_description">Description: Assign memory slot a name then read/write data to the slot.</p>
+                        <div class="chapter_content">
+                            <code><type>let</type> <name>myVar</name> = <val>10</val>;</code>
+                            <code><type>let</type> <name>a</name> = <val>20</val>, <name>b</name> = <val>30</val>, <name>c</name> = <val>40</val>;</code>
+                            <br>
+                            <code><type>var</type> <name>myVar2</name> = <val>12</val>;  <comm>// The old way to declare variable</comm></code>
+                            <br><br><hr><br><br>
+                            <code><type>const</type> <attr>PI</attr> = <val>3.14</val>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Type Operator</h3>
+                        <p class="chapter_description">Description: Check the data type of a variable.</p>
+                        <div class="chapter_content">
+                            <code><comm>// check the data type of a variable</comm></code>
+                            <code>  <type>typeof</type><pbrk>(</pbrk><name>myVar</name><pbrk>)</pbrk>;</code>
+                            <br>
+                            <code><comm>// check whether variable is an instance of a class</comm></code>
+                            <code>  <name>myCar</name> <type>instanceof</type> <class>Car</class>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Void</h3>
+                        <p class="chapter_description">Description: Return an undefined value.</p>
+                        <div class="chapter_content">
+                            <code><type>let</type> <name>undefinedVar</name> = <type>void</type> <val>1</val>;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="operator_section">
+                <h2 class="section_title">Operators</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Arithmetic</h3>
+                        <p class="chapter_description">Description: Perform basic mathematics operation on variable and values.</p>
+                        <div class="chapter_content">
+                            <code><type>let</type> <name>x</name> = <val>5</val>, <name>y</name> = <val>3</val>, <name>z</name>;</code>
+                            <br>
+                            <code><h4><u>Arithmetics</u></h4></code>
+                            <code><name>z</name> = <name>x</name> + <name>y</name>;      <comm>//z = 5+3 = 8</comm></code>
+                            <code><name>z</name> = <name>x</name> - <name>y</name>;      <comm>//z = 5-3 = 2</comm></code>
+                            <code><name>z</name> = <name>x</name> * <name>y</name>;      <comm>//z = 5x3 = 15</comm></code>
+                            <code><name>z</name> = <name>x</name> / <name>y</name>;      <comm>//z = 5/3 = 1.6667</comm></code>
+                            <code><name>z</name> = <name>x</name> % <name>y</name>;      <comm>//z = 5 mod 3 = 2</comm></code>
+                            <code><name>z</name> = <name>x</name> ** <name>y</name>;     <comm>//z = 5^3 = 125</comm></code>
+                            <br>
+                            <code><h4><u>Arithmetic Assignment</u></h4></code>
+                            <code><name>x</name> += <name>y</name>;     <comm>//x = x+y</comm></code>
+                            <code><name>x</name> -= <name>y</name>;     <comm>//x = x-y</comm></code>
+                            <code><name>x</name> *= <name>y</name>;     <comm>//x = x*y</comm></code>
+                            <code><name>x</name> /= <name>y</name>;     <comm>//x = x/y</comm></code>
+                            <code><name>x</name> %= <name>y</name>;     <comm>//x = x%y</comm></code>
+                            <code><name>x</name> **= <name>y</name>;    <comm>//x = x**y</comm></code>
+                            <br>
+                            <code><h4><u>Increment/Decrement</u></h4></code>
+                            <code><name>x</name>++;      <comm>// x+= 1; </comm>(return value first then do increment)</code>
+                            <code><name>x</name>--;      <comm>// x-= 1;</comm></code>
+                            <br>
+                            <code>++<name>x</name>;      <comm>// x+= 1; </comm>(increment first then return value)</code>
+                            <code>--<name>x</name>;      <comm>// x-= 1;</comm></code>
+                            <br>
+                            <code><h4><u>Parentheses</u></h4></code>
+                            <code><name>z</name> = <ybrk>(</ybrk><pbrk>(</pbrk><name>x</name>*<val>3.5</val><pbrk>)</pbrk> + <name>y</name><ybrk>)</ybrk> / <val>8</val>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Comparison</h3>
+                        <p class="chapter_description">Description: Compare two value and return boolean result.</p>
+                        <div class="chapter_content">
+                            <code><type>let</type> <name>bool_ans</name>, <name>d1</name> = <val>3</val>, <name>d2</name> = <val>5</val>;</code>
+                            <br>
+                            <code><h4><u>Comparison</u></h4></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> == <name>d2</name><ybrk>)</ybrk>;    <comm>//is 3 equal 5? -&gt; False</comm></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> != <name>d2</name><ybrk>)</ybrk>;    <comm>//is 3 not equal 5? -&gt; True</comm></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> &gt; <name>d2</name><ybrk>)</ybrk>;     <comm>//is 3 larger than 5? -&gt; False</comm></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> &lt; <name>d2</name><ybrk>)</ybrk>;     <comm>//is 3 smaller than 5? -&gt; True</comm></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> &gt;= <name>d2</name><ybrk>)</ybrk>;    <comm>//is 3 larger or equal 5? -&gt; False</comm></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> &lt;= <name>d2</name><ybrk>)</ybrk>;    <comm>//is 3 small or equal 5? -&gt; True</comm></code>
+                            <br><br>
+                            <code><h4><u>Comparison with types</u></h4></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> === <name>d2</name><ybrk>)</ybrk>;    <comm>//is 3 equal 5 and share same data type? -&gt; False</comm></code>
+                            <code><name>bool_ans</name> = <ybrk>(</ybrk><name>d1</name> !== <name>d2</name><ybrk>)</ybrk>;    <comm>//is 3 and 5 neither equal value nor the same data type? -&gt; True</comm></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Boolean</h3>
+                        <p class="chapter_description">Description: Perform boolean mathematics on Boolean variable and values.</p>
+                        <div class="chapter_content">
+                            <code><h4><u>Boolean</u></h4></code>
+                            <code><name>bool_ans</name> = !<type>true</type>              <comm>//flip the true/false value -&gt; false</comm></code>
+                            <code><name>bool_ans</name> = <type>true</type> &amp;&amp; <type>false</type>;     <comm>//return True when BOTH values are true -&gt; false</comm></code>
+                            <code><name>bool_ans</name> = <type>true</type> || <type>false</type>;     <comm>//return True when ANY values are true -&gt; true</comm></code>
+                            <br><br>
+                            <code><h4><u>Boolean Assignment</u></h4></code>
+                            <code><name>bool_ans</name> &amp;&amp;= <type>true</type>;      <comm>//bool_ans = bool_ans &amp;&amp; true</comm></code>
+                            <code><name>bool_ans</name> ||= <type>true</type>;      <comm>//bool_ans = bool_ans || true</comm></code>
+                        </div>
+                    </div>          
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Decision</h3>
+                        <p class="chapter_description">Description: Choose a value between two option base on comparison operation.</p>
+                        <div class="chapter_content">
+                            <code><name>foo</name> = <ybrk>(</ybrk><name>d1</name> &gt; <name>d2</name><ybrk>)</ybrk>? <val>10</val> : <val>2</val>;  <comm>//if condition is true return 10 (left), else return 2 (right).</comm></code>
+                            <code><name>foo</name> = <type>null</type> ?? <val>100</val>;      <comm>//return left by default. If it is null/undefined, return right</comm></code>
+                            <code><name>foo</name> ??= <val>100</val>;          <comm>// if foo is null, assign 100, else foo does not change.</comm></code>
+                        </div>
+                    </div>          
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Bitwise</h3>
+                        <p class="chapter_description">Description: Operating on each bit's value within a variable or value.</p>
+                        <div class="chapter_content">
+                            <code><type>let</type> <name>c1</name> = <val>0b01000010</val>, <name>mask</name> = <val>0b00110010</val>, <name>bit_ans</name>;</code>
+                            <br>
+                            <code><h4><u>Bitwise</u></h4></code>
+                            <code><name>bit_ans</name> = <name>c1</name> | <name>mask</name>;    <comm>// or -&gt; 01110010</comm></code>
+                            <code><name>bit_ans</name> = <name>c1</name> &amp; <name>mask</name>;    <comm>// and -&gt; 00000010</comm></code>
+                            <code><name>bit_ans</name> = <name>c1</name> ^ <name>mask</name>;    <comm>// xor -&gt; 01110000</comm></code>
+                            <code><name>bit_ans</name> = ~<name>c1</name>;                <comm>// not -&gt; 10111101</comm></code>
+                            <br>
+                            <code><h4><u>Bitwise Shift</u></h4></code>
+                            <code><name>bit_ans</name> = <name>c1</name> &lt;&lt; <val>1</val>;    <comm>// left shift -&gt; 10000100</comm></code>
+                            <code><name>bit_ans</name> = <name>c1</name> &gt;&gt; <val>2</val>;    <comm>// right shift -&gt; 00010000</comm></code>
+                            <code><name>bit_ans</name> = <name>c1</name> &gt;&gt;&gt; <val>2</val>;   <comm>// unsigned right shift -&gt; 00010000</comm></code>
+                            <br>
+                            <code><h4><u>Bitwise Assignment</u></h4></code>
+                            <code><name>bit_ans</name> |= <name>mask</name>;                <comm>// bit_ans = bit_ans | mask</comm></code>
+                            <code><name>bit_ans</name> &amp;= <name>mask</name>;                <comm>// bit_ans = bit_ans &amp; mask</comm></code>
+                            <code><name>bit_ans</name> ^= <name>mask</name>;                <comm>// bit_ans = bit_ans ^ mask</comm></code>
+                            <code><name>bit_ans</name> &lt;&lt;= <name>mask</name>;               <comm>// bit_ans = bit_ans &lt;&lt; mask</comm></code>
+                            <code><name>bit_ans</name> &gt;&gt;= <name>mask</name>;               <comm>// bit_ans = bit_ans &gt;&gt; mask</comm></code>
+                            <code><name>bit_ans</name> &gt;&gt;&gt;= <name>mask</name>;              <comm>// bit_ans = bit_ans &gt;&gt;&gt; mask</comm></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="condition_section">
+                <h2 class="section_title">Condition and Loop</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">If...else</h3>
+                        <p class="chapter_description">Description: Select a block of code to run base on a set of conditions.</p>
+                        <div class="chapter_content">
+                            <code><key>if</key> <ybrk>(</ybrk><name>x</name> == <val>2</val><ybrk>){</ybrk></code>
+                            <code>    <name>console</name>.<func>log</func><ybrk>(</ybrk><str>"x is 2"</str><ybrk>)</ybrk>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <code><key>else if</key> <ybrk>(</ybrk><name>y</name> &lt; <pbrk>(</pbrk><name>x</name> - <val>4</val><pbrk>)</pbrk><ybrk>){</ybrk></code>
+                            <code>    <name>console</name>.<func>log</func><ybrk>(</ybrk><str>"y is smaller than (x-4)"</str><ybrk>)</ybrk>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <code><key>else</key> <ybrk>{</ybrk></code>
+                            <code>    <name>console</name>.<func>log</func><ybrk>(</ybrk><str>"none of the above is true"</str><ybrk>)</ybrk>;</code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Switch...case</h3>
+                        <p class="chapter_description">Description: Run a selected block of code to run base on the value of a variable.</p>
+                        <div class="chapter_content">
+                            <code><key>switch</key><ybrk>(</ybrk><name>x</name><ybrk>){</ybrk></code>
+                            <code>    <key>case</key> <val>1</val>:</code>
+                            <code>        <name>console</name>.<func>log</func><pbrk>(</pbrk><str>"x is 1"</str><pbrk>)</pbrk>;</code>
+                            <code>        <key>break</key>;</code>
+                            <code>    <key>case</key> <val>2</val>:</code>
+                            <code>        <name>console</name>.<func>log</func><pbrk>(</pbrk><str>"x is 2"</str><pbrk>)</pbrk>;</code>
+                            <code>        <key>break</key>;</code>
+                            <code>    <key>case</key> <val>3</val>:</code>
+                            <code>        <name>console</name>.<func>log</func><pbrk>(</pbrk><str>"x is 3"</str><pbrk>)</pbrk>;</code>
+                            <code>        <key>break</key>;</code>
+                            <code>    <key>default</key>:</code>
+                            <code>        <name>console</name>.<func>log</func><pbrk>(</pbrk><str>"none of the above"</str><pbrk>)</pbrk>;</code>
+                            <code>        <key>break</key>;</code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">While Loops</h3>
+                        <p class="chapter_description">Description: Repeat a block of code when a given condition is met.</p>
+                        <div class="chapter_content">
+                            <code><h4><u>While Loop</u></h4></code>
+                            <code><type>let</type> <name>x</name> = <val>1</val>;</code>
+                            <code><key>while</key> <ybrk>(</ybrk><pbrk>(</pbrk><name>x</name> % <val>13</val><pbrk>)</pbrk> != <val>0</val><ybrk>){</ybrk></code>
+                            <code>    <comm>// do something until a multiples of 13 is found</comm></code>
+                            <code>    <name>x</name> += <val>7</val>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><key>while</key> <ybrk>(</ybrk><type>true</type><ybrk>){</ybrk></code>
+                            <code>    <comm>// loop forever</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><h4><u>Do...while Loop</u></h4></code>
+                            <code><type>let</type> <name>x</name> = <val>1</val>;</code>
+                            <code><key>do</key><ybrk>{</ybrk></code>
+                            <code>    <comm>// loop at least once, then decided by the while condition</comm></code>
+                            <code>    <name>x</name> += <val>7</val>;</code>
+                            <code><ybrk>}</ybrk> <key>while</key> <ybrk>(</ybrk><pbrk>(</pbrk><name>x</name> % <val>13</val><pbrk>)</pbrk> != <val>0</val><ybrk>)</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">For Loops</h3>
+                        <p class="chapter_description">Description: Repeat a block of code for a known amount.</p>
+                        <div class="chapter_content">
+                            <code><h4><u>For Loop</u></h4></code>
+                            <code><key>for</key> <ybrk>(</ybrk><type>let</type> <name>i</name> = <val>0</val>; <name>i</name> &lt; <val>5</val>; <name>i</name>++<ybrk>){</ybrk></code>
+                            <code><comm>/* (counter; exit condition; update counter) */</comm></code>
+                            <code>    <comm>// do something 5 times</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><key>for</key> <ybrk>(</ybrk>;;<ybrk>){</ybrk></code>
+                            <code>    <comm>// loop forever</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><h4><u>For...of Loop</u></h4></code>
+                            <code><type>const</type> <name>arr</name> = <ybrk>[</ybrk><val>10</val>, <val>5</val>, <val>8</val>, <val>9</val>, <val>4</val><ybrk>]</ybrk>;</code>
+                            <code><key>for</key> <ybrk>(</ybrk><type>let</type> <name>x</name> <key>of</key> <name>arr</name><ybrk>){</ybrk></code>
+                            <code>    <comm>// loop through every value in array or string</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><h4><u>For...in Loop</u></h4></code>
+                            <code><type>const</type> <name>carObj</name> = <ybrk>{</ybrk> <name>type</name>:<str>"car"</str>, <name>price</name>:<val>2500</val>, <name>qnt</name>:<val>10</val> <ybrk>}</ybrk>;</code>
+                            <code><key>for</key> <ybrk>(</ybrk><type>let</type> <name>x</name> <key>in</key> <name>carObj</name><ybrk>){</ybrk></code>
+                            <code>    <comm>// loop through every object property</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Break</h3>
+                        <p class="chapter_description">Description: Exit the loop entirely.</p>
+                        <div class="chapter_content">
+                            <code><key>while</key><ybrk>(</ybrk><name>x</name> &gt; <name>num</name><ybrk>){</ybrk></code>
+                            <code>    <comm>// ...</comm></code>
+                            <br>
+                            <code>    <key>if </key><pbrk>(</pbrk><name>my_condition</name><pbrk>){</pbrk></code>
+                            <code>        <key>break</key>;    <comm>/* exit the while loop */</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Continue</h3>
+                        <p class="chapter_description">Description: Exit the current iteration and start the next iteration.</p>
+                        <div class="chapter_content">
+                            <code><key>while</key><ybrk>(</ybrk><name>x</name> &gt; <name>num</name><ybrk>){</ybrk></code>
+                                <code>    <comm>// ...</comm></code>
+                            <br>
+                            <code>    <key>if </key><pbrk>(</pbrk><name>my_condition</name><pbrk>){</pbrk></code>
+                            <code>        <key>continue</key>;    <comm>/* skip the remaining of this iteration */</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <comm>// ...</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="function_section">
+                <h2 class="section_title">Function</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Functions</h3>
+                        <p class="chapter_description">Description: A re-usable block of code which can take input values to generate an output value.</p>
+                        <div class="chapter_content">
+                            <code><h4><u>Default Style:</u></h4></code><br>
+                            <code><key>function</key> <func>toCelsius</func><ybrk>(</ybrk><name>fahrenheit</name><ybrk>){</ybrk>        <comm>// Declaration</comm></code>
+                            <code>    <key>return</key> <pbrk>(</pbrk><val>5</val>/<val>9</val>*<bbrk>(</bbrk><name>fahrenheit</name>-<val>32</val><bbrk>)</bbrk><pbrk>)</pbrk>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>let</type> <name>sum</name> = <func>toCelsius</func><ybrk>(</ybrk><val>100</val><ybrk>)</ybrk>;              <comm>// Use function</comm></code>
+                            <br><br><hr><br><br>
+                            <code><h4><u>Alternative Form:</u></h4></code><br>
+                            <code><p>(1) - Function Object</p></code>
+                            <code><type>const</type> <attr>toCelsius1</attr> = <type>new</type> <class>Function</class><ybrk>(</ybrk><str>"fahrenheit"</str>, <str>"return (5/9) * (fahrenheit-32);"</str><ybrk>)</ybrk>;</code>
+                            <br><br>
+                            <code><p>(2) - Anonymous Function</p></code>
+                            <code><type>const</type> <attr>toCelsius2</attr> = <type>function</type><ybrk>(</ybrk><name>fahrenheit</name><ybrk>){</ybrk></code>
+                            <code>    <key>return</key> <pbrk>(</pbrk><val>5</val>/<val>9</val>*<bbrk>(</bbrk><name>fahrenheit</name>-<val>32</val><bbrk>)</bbrk><pbrk>)</pbrk>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <br><br>
+                            <code><p>(3) - Arrow Function</p></code>
+                            <code><type>const</type> <func>toCelsius</func> = <ybrk>(</ybrk><name>fahrenheit</name><ybrk>)</ybrk> <type>=&gt;</type> <ybrk>(</ybrk><val>5</val>/<val>9</val><ybrk>)</ybrk> * <ybrk>(</ybrk><name>fahrenheit</name>-<val>32</val><ybrk>)</ybrk>;</code>
+                            <code><comm>// (param) =&gt; return contents</comm></code>
+                            <br><br>
+                            <code><p>(4) - Immediately Invoked Function</p></code>
+                            <code><ybrk>(</ybrk><type>function</type> <func>invokeFunc</func><pbrk>(){</pbrk></code>
+                            <code>    <comm>// Run immediately after declaration</comm></code>
+                            <code><pbrk>}</pbrk><ybrk>) ()</ybrk>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Default Parameter Value</h3>
+                        <p class="chapter_description">Description: Provide a default input value if it is not given.</p>
+                        <div class="chapter_content">
+                            <code><type>function</type> <func>myFunc</func><ybrk>(</ybrk><name>param</name> = <val>1</val><ybrk>){</ybrk></code>
+                            <code>    <key>return</key> <name>param</name>*<val>2</val>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><func>myFunc</func><ybrk>(</ybrk>5<ybrk>)</ybrk>;</code>
+                            <code><func>myFunc</func><ybrk>(</ybrk><ybrk>)</ybrk>;    <comm>// --- myFunc(1) by default ---</comm></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Indefinite Arguments</h3>
+                        <p class="chapter_description">Description: Accept varying amount of input in similar type.</p>
+                        <div class="chapter_content">
+                            <code><type>function</type> <func>myFunc2</func><ybrk>(</ybrk>...<name>args</name><ybrk>){</ybrk></code>
+                            <code>    <key>for</key> <pbrk>(</pbrk><name>a</name> <key>of</key> <name>args</name><pbrk>){</pbrk></code>
+                            <code>        <comm>// --- Loop over every arguments as array ---</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><func>myFunc2</func><ybrk>(</ybrk><val>1</val>,<val>3</val>,<val>5</val>,<val>7</val><ybrk>)</ybrk>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Function Variable</h3>
+                        <p class="chapter_description">Description: Assign function to a variable. Programmatically select functions to execute.</p>
+                        <div class="chapter_content">
+                            <code><type>function</type> <func>func1</func><ybrk>(){</ybrk></code>
+                            <br>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>function</type> <func>func2</func><ybrk>(){</ybrk></code>
+                            <br>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>let</type> <func>funcVar</func> = <func>func2</func>;</code>
+                            <br>
+                            <code><func>funcVar</func><ybrk>()</ybrk>;    <comm>// Call func2()</comm></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Nested Function</h3>
+                        <p class="chapter_description">Description: Function can be nested inside each other.</p>
+                        <div class="chapter_content">
+                            <code><type>function</type> <func>outFunc</func><ybrk>(){</ybrk></code>
+                            <code>    <comm>// ---------------------</comm></code>
+                            <code>    <comm>//      outFunc Task     </comm></code>
+                            <code>    <comm>// ---------------------</comm></code>
+                            <br>
+                            <code>    <type>function</type> <func>inFunc</func><pbrk>(){</pbrk></code>
+                            <code>        <comm>// ---------------------</comm></code>
+                            <code>        <comm>//      inFunc Task     </comm></code>
+                            <code>        <comm>// ---------------------</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <func>inFunc</func><pbrk>()</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Generator Functions</h3>
+                        <p class="chapter_description">Description: Function that pause its execution when yielding a value and resume later.</p>
+                        <div class="chapter_content">
+                            <code><type>function</type>* <func>generatorFunc</func><ybrk>(</ybrk><name>i</name><ybrk>){</ybrk></code>
+                            <code>    <key>yield</key> <name>i</name>;</code>
+                            <code>    <key>yield</key> <name>i+1</name>;</code>
+                            <code>    <key>yield</key> <name>i+2</name>;</code>
+                            <code>    <key>return</key> <name>i+10</name>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>const</type> <attr>gen</attr> = <func>generatorFunc</func><ybrk>(</ybrk><val>10</val><ybrk>)</ybrk>;</code>
+                            <br>
+                            <code><attr>gen</attr>.<func>next</func><ybrk>()</ybrk>.<name>value</name>;    <comm>// 10</comm></code>
+                            <code><attr>gen</attr>.<func>next</func><ybrk>()</ybrk>.<name>value</name>;    <comm>// 11</comm></code>
+                            <code><attr>gen</attr>.<func>next</func><ybrk>()</ybrk>.<name>value</name>;    <comm>// 12</comm></code>
+                            <code><attr>gen</attr>.<func>next</func><ybrk>()</ybrk>.<name>value</name>;    <comm>// 20</comm></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="object_section">
+                <h2 class="section_title">Object</h2>
+                <div class="flex_layout">                 
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Object</h3>
+                        <p class="chapter_description">Description: A bundle of variables and functions.</p>
+                        <div class="chapter_content">
+                            <code><type>const</type> <attr>person</attr> = <ybrk>{</ybrk></code>
+                            <code>    <comm>/* --- Variables (aka. Properties) --- */</comm></code>
+                            <code>    <name>name</name>:<str>"Tom"</str>,</code>
+                            <code>    <name>age</name>:<val>25</val>,</code>
+                            <code>    <name>gender</name>:<str>"Male"</str>,</code>
+                            <br>
+                            <code>    <comm>/* --- Functions (aka. Methods) --- */</comm></code>
+                            <code>    <func>info</func>:<type>function</type><pbrk>(){</pbrk></code>
+                            <br>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk>;</code>
+                            <br>
+                            <code><attr>person</attr>.<name>name</name>;</code>
+                            <code><attr>person</attr><ybrk>[</ybrk><str>"name"</str><ybrk>]</ybrk>;</code>
+                            <br>
+                            <code><attr>person</attr>.<func>info</func><ybrk>()</ybrk>;</code>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Add/Delete Property</h3>
+                        <p class="chapter_description">Description: Modify the content of an object.</p>
+                        <div class="chapter_content">
+                            <code><comm>// Add/delete property</comm></code>
+                            <code><attr>person</attr>.<name>height</name> = <val>178</val>;</code>
+                            <code><type>delete</type> <attr>person</attr>.<name>age</name>;</code>
+                            <br>
+                            <code><comm>// Add/delete method</comm></code>
+                            <code><attr>person</attr>.<name>sayHi</name> = <type>function</type><ybrk>(){    }</ybrk></code>
+                            <code><type>delete</type> <attr>person</attr>.<name>sayHi</name>;</code>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Function Constructor</h3>
+                        <p class="chapter_description">Description: A function which create objects with the same format repeatedly.</p>
+                        <div class="chapter_content">
+                            <code><comm> /* --- Function constructor --- */</comm></code>
+                            <code><type>function</type> <class>Person</class><ybrk>(</ybrk><name>n</name>,<name>a</name>,<name>g</name><ybrk>){</ybrk></code>
+                            <code>    <type>this</type>.<name>name</name> = <name>n</name>;</code>
+                            <code>    <type>this</type>.<name>age</name> = <name>a</name>;</code>
+                            <code>    <type>this</type>.<name>gender</name> = <name>g</name>;</code>
+                            <code>    <type>this</type>.<func>info</func> = <type>function</type><pbrk>(){   }</pbrk>;    <comm>// Default parameter</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>const</type> <attr>person3</attr> = <type>new</type> <class>Person</class><ybrk>(</ybrk><str>"May"</str>, <val>24</val>, <str>"Female"</str><ybrk>)</ybrk>;     <comm>// &lt;= Using function constructor here</comm></code>
+                            <br>
+                            <code><class>Person</class>.<name>prototype</name>.<func>sayHi</func> = <type>function</type><ybrk>(){</ybrk></code>
+                            <br>
+                            <code><ybrk>}</ybrk>;</code>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Getter &amp; Setter</h3>
+                        <p class="chapter_description">Description: Read/writre into object property with special operation, instead of direct assignment.</p>
+                        <div class="chapter_content">
+                            <code><type>const</type> <attr>temperature</attr> = <ybrk>{</ybrk></code>
+                            <code>    <name>celcius</name>:<val>25</val>,</code>
+                            <br>
+                            <code>    <type>get</type> <name>fahrenheit</name><pbrk>(){</pbrk>                 <comm>/* Getter */</comm></code>
+                            <code>        <key>return</key> <type>this</type>.<name>celcius</name>*<val>9</val>/<val>5</val>+<val>32</val>;</code>
+                            <code>    <pbrk>}</pbrk>,</code>
+                            <br>
+                            <code>    <type>set</type> <name>fahrenheit</name><pbrk>(</pbrk><name>f</name><pbrk>){</pbrk>                <comm>/* Setter */</comm></code>
+                            <code>        <type>this</type>.<name>celcius</name> = <bbrk>(</bbrk><name>f</name>-<val>32</val><bbrk>)</bbrk>*<val>5</val>/<val>9</val>;</code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><attr>temperature</attr>.<name>fahrenheit</name> = <val>50</val>;</code>
+                            <br>
+                            <code><name>console</name>.<func>log</func><ybrk>(</ybrk><attr>temperature</attr>.<name>celcius</name><ybrk>)</ybrk>;       <comm>// &gt;&gt; 10</comm></code>
+                            <code><name>console</name>.<func>log</func><ybrk>(</ybrk><attr>temperature</attr>.<name>fahrenheit</name><ybrk>)</ybrk>;    <comm>// &gt;&gt; 50</comm></code>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Nested Object</h3>
+                        <p class="chapter_description">Description: Object can be defined in an object.</p>
+                        <div class="chapter_content">
+                            <code><type>const</type> <attr>person2</attr> = <ybrk>{</ybrk></code>
+                            <code>    <name>name</name>:<str>"Jack"</str>,</code>
+                            <code>    <name>age</name>:<val>35</val>,</code>
+                            <code>    <name>gender</name>:<str>"Male"</str>,</code>
+                            <br>
+                            <code>    <name>vehicle</name>:<pbrk>{</pbrk>                <comm>// &lt;= Nested Object</comm></code>
+                            <code>        <name>brand</name>:<str>"Toyota"</str>,</code>
+                            <code>        <name>model</name>:<str>"Corolla"</str>,</code>
+                            <code>        <name>year</name>:<val>2025</val></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><attr>person2</attr>.<name>vehicle</name>.<name>brand</name>;             <comm>// &gt;&gt; Toyota</comm></code>
+                            <code><attr>person2</attr><ybrk>[</ybrk><str>"vehicle"</str><ybrk>]</ybrk><ybrk>[</ybrk><str>"brand"</str><ybrk>]</ybrk>;       <comm>// &gt;&gt; Toyota</comm></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="class_section">
+                <h2 class="section_title">Class</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Class</h3>
+                        <p class="chapter_description">Description: A blueprint of object for repeated creation.</p>
+                        <div class="chapter_content">
+                            <code><type>class</type> <class>Airplane</class> <ybrk>{</ybrk></code>
+                            <code>    <type>constructor</type><pbrk>(</pbrk><name>m</name>,<name>y</name><pbrk>){</pbrk></code>
+                            <code>        <comm>/* Declare properties in constructor function */</comm></code>
+                            <code>        <type>this</type>.<name>model</name> = <name>m</name>;</code>
+                            <code>        <type>this</type>.<name>year</name> = <name>y</name>;</code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <func>takeoff</func><pbrk>(</pbrk><pbrk>){</pbrk></code>
+                            <code>        <comm>/* Do something that takeoff the plane */</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>let</type> <name>plane</name> = <type>new</type> <class>Airplane</class><ybrk>(</ybrk><str>"Boeing 737"</str>, <val>2010</val><ybrk>)</ybrk>;</code>
+                            <code><name>plane</name>.<func>takeoff</func><ybrk>()</ybrk>;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Inheritance</h3>
+                        <p class="chapter_description">Description: Create a new class by extending features bases on an existing class.</p>
+                        <div class="chapter_content">
+                            <code><type>class</type> <class>FighterJet</class> <type>extends</type> <class>Airplane</class><ybrk>{</ybrk></code>
+                            <code>    <type>constructor</type><pbrk>(</pbrk><name>m</name>,<name>y</name>,<name>ap</name><pbrk>){</pbrk></code>
+                            <code>        <type>super</type><bbrk>(</bbrk><name>m</name>,<name>y</name><bbrk>)</bbrk></code>
+                            <code>        <type>this</type>.<name>attackPower</name> = <name>ap</name>;</code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <func>attack</func><pbrk>(</pbrk><pbrk>){</pbrk></code>
+                            <code>        <comm>/* Do something that attack */</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>let</type> <name>f35</name> = <type>new</type> <class>FighterJet</class><ybrk>(</ybrk><str>"F35"</str>, <val>2018</val>, <val>120</val><ybrk>)</ybrk>;</code>
+                            <code><name>f35</name>.<func>takeoff</func><ybrk>()</ybrk>;</code>
+                            <code><name>f35</name>.<func>attack</func><ybrk>()</ybrk>;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Static</h3>
+                        <p class="chapter_description">Description: Property/method which is defined under the class.</p>
+                        <div class="chapter_content">
+                            <code><type>class</type> <class>Math</class> <ybrk>{</ybrk></code>
+                            <code>    <type>static</type> <name>PI</name> = <val>3.14</val>;</code>
+                            <code>    <type>static</type> <func>cos</func><pbrk>(){</pbrk></code>
+                            <code>        <comm>// Calculate cosine</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <type>static</type> <func>sqrt</func><pbrk>(){</pbrk></code>
+                            <code>        <comm>// Calculate square</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>let</type> <name>x</name> = <class>Math</class>.<func>cos</func><ybrk>()</ybrk>;</code>
+                            <code><name>console</name>.<func>log</func><ybrk>(</ybrk><class>Math</class>.<name>PI</name><ybrk>)</ybrk>;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Priavte Property/Method</h3>
+                        <p class="chapter_description">Description: Internal data/operaion which can only be used inside the class.</p>
+                        <div class="chapter_content">
+                            <code><type>class</type> <class>MyClass</class> <ybrk>{</ybrk></code>
+                            <code>    <name>#privateVar</name> = <val>1</val>; <comm>// Internal Data</comm></code>
+                            <code>    <name>publicVar</name> = <val>2</val>;</code>
+                            <br>
+                            <code>    <func>#privateFunc</func><pbrk>(){</pbrk></code>
+                            <code>        <comm>// -----------------------</comm></code>
+                            <code>        <comm>//   Internal Operations</comm></code>
+                            <code>        <comm>// -----------------------</comm></code>
+                            <br>
+                            <code>        <type>this</type>.<name>#privateVar</name> += <val>1</val>;   <comm>// &lt;= Use private property</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <func>publicFunc</func><pbrk>(){</pbrk></code>
+                            <code>        <comm>// -----------------------</comm></code>
+                            <code>        <comm>//   Do Something</comm></code>
+                            <code>        <comm>// -----------------------</comm></code>
+                            <br>
+                            <code>        <type>this</type>.<name>#privateFunc</name><pbrk>()</pbrk>;     <comm>// &lt;= Use private method</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><type>let</type> <name>myclass</name> = <type>new</type> <class>MyClass</class><ybrk>()</ybrk>;</code>
+                            <br>
+                            <code><name>myclass</name>.<func>publicFunc</func><ybrk>()</ybrk>;</code>
+                            <code><name>myclass</name>.<func>publicVar</func> = <val>6</val>;</code>
+                            <br>
+                            <code><comm>/* Error (Not available outisde MyClass) */</comm></code>
+                            <code><name>myclass</name>.<func>privateFunc</func><ybrk>()</ybrk>;</code>
+                            <code><name>myclass</name>.<func>privateVar</func> = <val>7</val>;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="error_section">
+                <h2 class="section_title">Error Handling</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Try...Catch...Finally</h3>
+                        <p class="chapter_description">Description: Run a block of risky code. If it crash, run another block as follow-up.</p>
+                        <div class="chapter_left_content">
+                            <code><key>try</key> <ybrk>{</ybrk></code>
+                            <code>    <comm>// -------------------------</comm></code>
+                            <code>    <comm>//  Do task that may crash  </comm></code>
+                            <code>    <comm>// -------------------------</comm></code>
+                            <br>
+                            <code>    <key>throw</key> <str>"Error Message"</str>;   <comm>// throw -&gt; Artifical crash from programmer</comm></code>
+                            <code><pbrk>}</pbrk></code>
+                            <code><key>catch</key> <ybrk>(</ybrk><name>err</name><ybrk>){</ybrk></code>
+                            <code>    <comm>// --------------------------------------------</comm></code>
+                            <code>    <comm>//  Error Handling  (run if try block crashed) </comm></code>
+                            <code>    <comm>// --------------------------------------------</comm></code>
+                            <code><pbrk>}</pbrk></code>
+                            <code><key>finally</key><ybrk>{</ybrk></code>
+                            <code>    <comm>// ---------------------------------------</comm></code>
+                            <code>    <comm>//  Run regradless of try...catch result </comm></code>
+                            <code>    <comm>// ---------------------------------------</comm></code>
+                            <code><pbrk>}</pbrk></code>
+                            <br>
+                        </div>
+                        <div class="chapter_right_content">
+                            <code><h4><u>Example:</u></h4></code>
+                            <code><type>function</type> <func>area</func><ybrk>(</ybrk><name>x</name>,<name>y</name><ybrk>){</ybrk></code>
+                            <code>    <key>if</key> <pbrk>(</pbrk><name>x</name> &lt; <val>0</val> || <name>y</name> &lt; <val>0</val><pbrk>){</pbrk></code>
+                            <code>        <key>throw</key> <str>"Negative Side Length"</str>; <comm>// Undesireble condition -&gt; throw</comm></code>
+                            <code>    <pbrk>}</pbrk></code>
+                            <br>
+                            <code>    <key>return</key> <name>x</name>*<name>y</name>;</code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><key>try</key><ybrk>{</ybrk></code>
+                            <code>    <func>area</func><pbrk>(</pbrk><val>-1</val>,<val>5</val><pbrk>)</pbrk>;    <comm>// &lt;= Do something risky</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <code><key>catch</key><ybrk>(</ybrk><name>err</name><ybrk>){</ybrk></code>
+                            <code>    <name>console</name>.<func>log</func><pbrk>(</pbrk><str>"Error is "</str>, <name>err</name><pbrk>)</pbrk>;  <comm>// &gt;&gt; Error is Negative Side Length</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <code><key>finally</key><ybrk>{</ybrk></code>
+                            <code>    <comm>// ...</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="async_section">
+                <h2 class="section_title">Asynchronous</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Async...Await</h3>
+                        <p class="chapter_description">Description: Run an asynchronous function as if it is normal line-by-line code.</p>
+                        <div class="chapter_content">
+                            <code><type>async function</type> <func>myPostRequest</func><ybrk>(){</ybrk></code>
+                            <br>
+                            <code>    <type>const</type> <name>data</name> = <type>await</type> <func>fetch</func><pbrk>(</pbrk><str>'https://jsonplaceholder.typicode.com/posts'</str><pbrk>)</pbrk>;    <comm>// &lt;= wait for asynchronus operation finish</comm></code>
+                            <br>
+                            <code>    <comm>// ---------------------------------</comm></code>
+                            <code>    <comm>//      Display Data on screen   </comm></code>
+                            <code>    <comm>// ---------------------------------</comm></code>
+                            <code><ybrk>}</ybrk></code>
+                            <br>
+                            <code><func>myPostRequest</func><ybrk>()</ybrk>;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="file_section">
+                <h2 class="section_title">File System</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Export...Import</h3>
+                        <p class="chapter_description">Description: Share variable and function across files.</p>
+                        <div class="chapter_content">
+                            <code><comm>/* --- util.js --- */</comm></code>
+                            <code><key>export</key> <type>const</type> <attr>PI</attr> = <val>3.14</val>;  <comm>// export one variable</comm></code>
+                            <br><br>
+                            <code><type>let</type> <name>x</name> = <val>10</val>, <name>y</name> = <val>20</val>;</code>
+                            <code><key>export</key> <ybrk>{</ybrk> <name>x</name>, <name>y</name> <ybrk>}</ybrk>;         <comm>// export multiple data</comm></code>
+                            <br><br><br>
+                            <code><comm>/* --- main.js --- */</comm></code>
+                            <code><key>import</key> <ybrk>{</ybrk> <attr>PI</attr>, <name>x</name>, <name>y</name> <ybrk>}</ybrk> <key>from</key> <str>'./util.js'</str>;</code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Default Export</h3>
+                        <p class="chapter_description">Description: Assign one export data as the only default export.</p>
+                        <div class="chapter_content">
+                            <code><comm>/* --- util.js --- */</comm></code>
+                            <code><type>let</type> <name>x</name> = <val>10</val>;</code>
+                            <code><key>export default</key> <name>x</name>;   <comm>// &lt;- the only export data</comm></code>
+                            <br><br><br>
+                            <code><comm>/* --- main.js --- */</comm></code>
+                            <br>
+                            <comm>// x from util.js can be assigned as y here.</comm>
+                            <code><key>import</key> <name>y</name> <key>from</key> <str>'./util.js'</str>;</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="debug_section">
+                <h2 class="section_title">Debug</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Debugger</h3>
+                        <p class="chapter_description">Description: Use code to create a breakpoint which trigger when run through.</p>
+                        <div class="chapter_content">
+                            <code><type>function</type> <func>myFunc</func> <ybrk>(){</ybrk></code>
+                                <code>    <type>let</type> <name>x</name> = <val>10</val>;</code>
+                                <br>
+                                <code>    <type>debugger;</type>  <comm>// &lt;- Breakpoint (F12 developer tool need to be turned on to trigger)</comm></code>
+                                <br>
+                                <code>    <name>x</name> += <val>5</val>;</code>
+                            <code><ybrk>}</ybrk></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            
+        </aside>
+
+        <footer>
+            <br><br>
+        </footer>
+    
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

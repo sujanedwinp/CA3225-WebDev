@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)https://syntaxsimplified.com/cheatsheet/HTML/hypertext_markup_language.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>HTML Cheat Sheet</title>
+        <meta name="author" content="Hoi Kin Poon, Jason">
+        <meta name="description" content="This is a cheat sheet about HTML programming language. It include everything about HTML and organized with nice UI design. It also provice interactive examples.">
+        <meta name="keywords" content="HTML,cheat sheet,hypertext markup language,tutorial,frontend,web dev">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta property="og:title" content="HTML Cheat Sheet">
+        <meta property="og:description" content="An &#39;everything&#39; included HTML cheat sheet. you can use it as the index page of HTML, while enjoy the well designed UI">
+        <meta property="og:image" content="/cheatsheet/HTML/img/og_image.png">
+        <meta property="og:url" content="https://syntaxsimplified.com/cheatsheet/HTML/hypertext_markup_language.html">
+        <meta property="og:type" content="website">
+
+        
+        <link rel="stylesheet" href="./HTML Cheat Sheet_files/hypertext_markup_language.css">
+        <script src="./HTML Cheat Sheet_files/hypertext_markup_language.js"> </script>
+        <script async="" src="./HTML Cheat Sheet_files/js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HJZLH4TLRX');
+        </script>
+
+    <!-- Release Date: 10/Jan/2025; Last Update: 5/May/2025 -->
+    </head>
+    <body data-new-gr-c-s-check-loaded="14.1126.0" data-gr-ext-installed="">
+        <header>
+            <a href="https://syntaxsimplified.com/"> <img src="./HTML Cheat Sheet_files/icon.png"></a>
+            <a href="https://syntaxsimplified.com/"> <h1>Syntax Simplified</h1></a>
+        </header>
+        <nav></nav>
+
+        <aside>
+            <form id="side_menu">
+                <label for="radio_A" class="side_menu_label" onclick="document.getElementById(&#39;layout_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_A" name="section" type="radio"><span class="side_menu_text">Layout &amp; Head Tag</span><span class="radio_overlay"></span>
+                </label> 
+                <label for="radio_B" class="side_menu_label" onclick="document.getElementById(&#39;text_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_B" name="section" type="radio"><span class="side_menu_text">Text Tag</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_C" class="side_menu_label" onclick="document.getElementById(&#39;list_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_C" name="section" type="radio"><span class="side_menu_text">List &amp; Table Tag</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_D" class="side_menu_label" onclick="document.getElementById(&#39;form_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_D" name="section" type="radio"><span class="side_menu_text">Input &amp; Form Tag</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_E" class="side_menu_label" onclick="document.getElementById(&#39;media_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_E" name="section" type="radio"><span class="side_menu_text">Media Tag</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_F" class="side_menu_label" onclick="document.getElementById(&#39;hide_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_F" name="section" type="radio"><span class="side_menu_text">Hidden Content</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_G" class="side_menu_label" onclick="document.getElementById(&#39;lang_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_G" name="section" type="radio"><span class="side_menu_text">JS, CSS &amp; XML</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_H" class="side_menu_label" onclick="document.getElementById(&#39;DOM_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_H" name="section" type="radio"><span class="side_menu_text">DOM Tree</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_I" class="side_menu_label" onclick="document.getElementById(&#39;meta_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_I" name="section" type="radio"><span class="side_menu_text">Meta/Link attributes</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_J" class="side_menu_label" onclick="document.getElementById(&#39;attr_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_J" name="section" type="radio"><span class="side_menu_text">All Attributes</span><span class="radio_overlay"></span>
+                </label>
+                <label for="radio_K" class="side_menu_label" onclick="document.getElementById(&#39;value_section&#39;).scrollIntoView({ behavior: &#39;instant&#39;, block: &#39;start&#39; });">
+                    <input id="radio_K" name="section" type="radio"><span class="side_menu_text">All Values</span><span class="radio_overlay"></span>
+                </label>
+            </form>
+        </aside>
+
+        <main>
+            <section id="intro_section">
+                <hgroup id="cheatsheet_title">
+                    <img id="language_icon" src="./HTML Cheat Sheet_files/HTML_logo.svg" alt="HTML logo">
+                    <h1 id="language_name">HTML</h1>
+                    <h1 id="sub_title">Cheatsheet</h1>
+                </hgroup>
+            </section>
+
+            <section id="layout_section">
+                <h2 class="section_title">Layout &amp; Head Tag</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">HTML Document</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;!</brk><tag>DOCTYPE html</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>html</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>head</tag><brk>&gt;</brk></code>
+                            <code>        <comm>&lt;!-- Here are the metadata --&gt;</comm></code>
+                            <code>    <brk>&lt;/</brk><tag>head</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>body</tag><brk>&gt;</brk></code>
+                            <code>        <comm>&lt;!-- Here are the visual elements --&gt;</comm></code>
+                            <code>    <brk>&lt;/</brk><tag>body</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>html</tag><brk>&gt;</brk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Head</h3>
+                        <div class="chapter_content">
+                            <code><comm>&lt;!-- Define the name of webpage --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>title</tag><brk>&gt;</brk> Webpage name <brk>&lt;/</brk><tag>title</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Define metadata of webpage --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>charset</attr>=<val>"UTF-8"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"author"</val> <attr>content</attr>=<val>"David"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Specify the base URL for resource files --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>base</tag> <attr>href</attr>=<val>"https://www.cheatsheet.com/"</val> <attr>target</attr>=<val>"_blank"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Link external file to webpage --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>link</tag> <attr>rel</attr>=<val>"icon"</val> <attr>href</attr>=<val>"favicon.ico"</val><brk>&gt;</brk></code>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter layout_chapter">
+                        <h3 class="chapter_title">Webpage Layout</h3>
+                        <div class="chapter_left_content">
+                            <code><comm>&lt;!-- Intro content --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>header</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>header</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Navigation Bar --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>nav</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>nav</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Main Body --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>main</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>main</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Section inside main body --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>section</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>section</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Left/Right side content --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>aside</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>aside</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- End of page --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>footer</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>footer</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <img src="./HTML Cheat Sheet_files/layout.svg" width="250px" height="250px" id="layout_svg" loading="lazy">
+                        </div>
+                    </div>
+                    <div id="con_form_gp" class="flex_content chapter layout_chapter">
+                        <h3 class="chapter_title">Content Formating</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>br</tag><brk>&gt;</brk>  <comm>&lt;!-- Empty line --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>hr</tag><brk>&gt;</brk>  <comm>&lt;!-- Horizonal line --&gt;</comm></code>
+                            <div>
+                                <code><brk>&lt;</brk><tag>div</tag><brk>&gt;</brk></code>
+                                <code><brk>    &lt;</brk><tag>span</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>span</tag><brk>&gt;</brk></code>
+                                <code><brk>    &lt;</brk><tag>span</tag><brk>&gt;</brk>       <brk>&lt;/</brk><tag>span</tag><brk>&gt;</brk></code>
+                                <code><brk>&lt;/</brk><tag>div</tag><brk>&gt;</brk></code>
+                            </div>
+                        </div>
+                        <div class="chapter_right_content">
+                            <span class="note">(This is an empty line)</span><br><br>
+                            <div><hr class="hr_line"></div><br>
+                            <div><img src="./HTML Cheat Sheet_files/div-span.svg" width="200" height="30" id="div_span_svg" loading="lazy"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="text_section">
+                <h2 class="section_title">Text Tag</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter text_chapter">
+                        <h3 class="chapter_title">Text</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>h1</tag><brk>&gt;</brk> Header 1 <brk>&lt;/</brk><tag>h1</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>h2</tag><brk>&gt;</brk> Header 2 <brk>&lt;/</brk><tag>h2</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>h3</tag><brk>&gt;</brk> Header 3 <brk>&lt;/</brk><tag>h3</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>h4</tag><brk>&gt;</brk> Header 4 <brk>&lt;/</brk><tag>h4</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>h5</tag><brk>&gt;</brk> Header 5 <brk>&lt;/</brk><tag>h5</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>h6</tag><brk>&gt;</brk> Header 6 <brk>&lt;/</brk><tag>h6</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>p</tag><brk>&gt;</brk> Paragraph <brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>pre</tag><brk>&gt;</brk></code>
+                            <code>Pre-formatted text</code>
+                            <code>    Pre-formatted text</code>
+                            <code><brk>&lt;/</brk><tag>pre</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <h1 class="example">Header 1</h1>
+                            <h2 class="example">Header 2</h2>
+                            <h3 class="example">Header 3</h3>
+                            <h4 class="example">Header 4</h4>
+                            <h5 class="example">Header 5</h5>
+                            <h6 class="example">Header 6</h6>
+                            <p class="example">Paragraph</p>
+                            <pre class="example">Pre-formatted text
+    Pre-formatted text
+                            </pre>
+                        </div>
+                    </div>
+                    <div class="flex_content chapter  text_chapter">
+                        <h3 class="chapter_title">Text - Font</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>b</tag><brk>&gt;</brk> Bold <brk>&lt;/</brk><tag>b</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>i</tag><brk>&gt;</brk> Italic <brk>&lt;/</brk><tag>i</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>u</tag><brk>&gt;</brk> Underscore <brk>&lt;/</brk><tag>u</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>s</tag><brk>&gt;</brk> Strike <brk>&lt;/</brk><tag>s</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>small</tag><brk>&gt;</brk> Small <brk>&lt;/</brk><tag>small</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>sup</tag><brk>&gt;</brk> Superscript <brk>&lt;/</brk><tag>sup</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>sub</tag><brk>&gt;</brk> Subscript <brk>&lt;/</brk><tag>sub</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>mark</tag><brk>&gt;</brk> Mark <brk>&lt;/</brk><tag>mark</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>ruby</tag><brk>&gt;</brk> 寿司 <brk>&lt;</brk><tag>rt</tag><brk>&gt;</brk>すし<brk>&lt;/</brk><tag>rt</tag><brk>&gt;</brk><brk>&lt;/</brk><tag>ruby</tag><brk>&gt;</brk></code>
+                        </div>                        
+                        <div class="chapter_right_content">
+                            <b class="example"> Bold </b><br>
+                            <i class="example"> Italic </i><br>
+                            <u class="example"> Underscore </u><br>
+                            <s class="example"> Strike </s><br>
+                            <small class="example"> Small </small><br>
+                            <sup class="example"> Superscript </sup><br>
+                            <sub class="example"> Subscript </sub><br>
+                            <mark class="example"> Mark </mark><br>
+                            <ruby class="example"> 寿司 <rt>すし</rt> </ruby>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter  text_chapter">
+                        <h3 class="chapter_title">Text - Tone</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>em</tag><brk>&gt;</brk> emphasized text <brk>&lt;/</brk><tag>em</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>ins</tag><brk>&gt;</brk> inserted text <brk>&lt;/</brk><tag>ins</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>del</tag><brk>&gt;</brk> deleted text <brk>&lt;/</brk><tag>del</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>strong</tag><brk>&gt;</brk> Important message!!! <brk>&lt;/</brk><tag>strong</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <em class="example">emphasized text</em><br>
+                            <ins class="example">inserted text</ins><br>
+                            <del class="example">deleted text</del><br>
+                            <strong class="example">Important message!!!</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter  text_chapter">
+                        <h3 class="chapter_title">Text - Key Information</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>address</tag><brk>&gt;</brk> 11 Wall St, New York <brk>&lt;/</brk><tag>address</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>time</tag><brk>&gt;</brk> 16:18:19 <brk>&lt;/</brk><tag>time</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>var</tag><brk>&gt;</brk> variable <brk>&lt;/</brk><tag>var</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>code</tag><brk>&gt;</brk> printf("Hello World"); <brk>&lt;/</brk><tag>code</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>abbr</tag><brk>&gt;</brk> HTML <brk>&lt;/</brk><tag>abbr</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>data</tag> <attr>value</attr>=<val>"#FF0000"</val><brk>&gt;</brk> Red <brk>&lt;/</brk><tag>data</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>samp</tag><brk>&gt;</brk> C:\user&gt; Hello World <brk>&lt;/</brk><tag>samp</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>def</tag><brk>&gt;</brk> Term to be defined <brk>&lt;/</brk><tag>def</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>kbd</tag><brk>&gt;</brk> Ctrl + C <brk>&lt;/</brk><tag>kbd</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <address class="example">11 Wall St, New York</address>
+                            <time class="example">16:18:19</time><br>
+                            <var class="example">variable</var><br>
+                            <code class="example">printf("Hello World");</code>
+                            <abbr class="example">HTML</abbr><br>
+                            <data class="example" value="#FF0000">Red</data><br>
+                            <samp class="example">C:\user&gt; Hello World</samp><br>
+                            <def class="example">Term to be defined</def><br>
+                            <kbd class="example">Ctrl + C</kbd>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Text - Key Information</h3>
+                        <div class="chapter_content">
+                            <code><comm>&lt;!-- Bi-direction overwrite --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>bdo</tag> <attr>dir</attr>=<val>"rtl"</val><brk>&gt;</brk> This text start from right to left <brk>&lt;/</brk><tag>bdo</tag><brk>&gt;</brk></code>
+                            <br> <bdo class="example" dir="rtl">This text start from right to left</bdo><br><br><br>
+
+                            <code><comm>&lt;!-- Bi-direction isolation  --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>p</tag><brk>&gt;</brk> Isolate the arabic(R-&gt;L) <brk>&lt;</brk><tag>bdi</tag><brk>&gt;</brk>العربية<brk>&lt;/</brk><tag>bdi</tag><brk>&gt;</brk> from English(L-&gt;R) text. <brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <br><p class="example"> Isolate the arabic(R-&gt;L) <bdi>العربية</bdi> from English(L-&gt;R) text.</p><br><br>
+
+                            <code><comm>&lt;!-- Word break  --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>p</tag><brk>&gt;</brk> LineBreakOccurAtWBR_Tag<brk>&lt;</brk><tag>wbr</tag><brk>&gt;</brk>IfLongWordIsOverflowed <brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <br><p class="example"> LineBreakOccurAtWBR_Tag<wbr>IfLongWordIsOverflowed</p>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Text - Citation</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>cite</tag><brk>&gt;</brk> Da Vinci, Leonardo. Mona Lisa. 1503 <brk>&lt;/</brk><tag>cite</tag><brk>&gt;</brk></code>
+                            <br><cite class="example"> Da Vinci, Leonardo. Mona Lisa. 1503</cite>
+                            <br><br><br>
+                            <code><brk>&lt;</brk><tag>blockquote</tag> <attr>cite</attr>=<val>"example.com"</val><brk>&gt;</brk>this is content from other website<brk>&lt;/</brk><tag>blockquote</tag><brk>&gt;</brk></code>
+                            <br><blockquote class="example"> this is content from other website</blockquote>
+                            <br><br><br>
+                            <code><brk>&lt;</brk><tag>q</tag><brk>&gt;</brk> I have not failed, I've just found 10000 ways that don't work.<brk>&lt;/</brk><tag>q</tag><brk>&gt;</brk></code>
+                            <br> <q class="example">I have not failed, I've just found 10000 ways that don't work.</q>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Grouping - Header Group</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>hgroup</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>h1</tag><brk>&gt;</brk> HTML <brk>&lt;/</brk><tag>h1</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>p</tag><brk>&gt;</brk> A markup language for webpage <brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>hgroup</tag><brk>&gt;</brk></code>
+                            <br><br>
+                            <hgroup>
+                                <h1 class="example"> HTML </h1>
+                                <p class="example"> A markup language for webpage </p>
+                            </hgroup>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Grouping - Article</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>article</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>h1</tag><brk>&gt;</brk> Article Title <brk>&lt;/</brk><tag>h1</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>p</tag><brk>&gt;</brk> This is the article paragraph. <brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>article</tag><brk>&gt;</brk></code>
+                            <br><br>
+                            <article>
+                                <h1 class="example"> Article Title </h1>
+                                <p class="example"> This is the article paragraph. </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="list_section">
+                <h2 class="section_title">List &amp; Table Tag</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter list_chapter">
+                        <h3 class="chapter_title">List - Ordered List</h3>
+                        <div class="chapter_left_content">
+                            <code><comm>&lt;!-- Ordered List --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>ol</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>li</tag><brk>&gt;</brk> Ordered Item 1 <brk>&lt;/</brk><tag>li</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>li</tag><brk>&gt;</brk> Ordered Item 2 <brk>&lt;/</brk><tag>li</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>li</tag><brk>&gt;</brk> Ordered Item 3 <brk>&lt;/</brk><tag>li</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>ol</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <ol class="example">
+                                <li class="example"> Ordered Item 1 </li>
+                                <li class="example"> Ordered Item 2 </li>
+                                <li class="example"> Ordered Item 3 </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter list_chapter">
+                        <h3 class="chapter_title">List - Un-ordered List</h3>
+                        <div class="chapter_left_content">
+                            <code><comm>&lt;!-- Un-ordered List --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>ul</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>li</tag><brk>&gt;</brk> Item X <brk>&lt;/</brk><tag>li</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>li</tag><brk>&gt;</brk> Item Y <brk>&lt;/</brk><tag>li</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>li</tag><brk>&gt;</brk> Item Z <brk>&lt;/</brk><tag>li</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>ul</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <ul class="example">
+                                <li class="example"> Item X </li>
+                                <li class="example"> Item Y </li>
+                                <li class="example"> Item Z </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter list_chapter">
+                        <h3 class="chapter_title">List - Description List</h3>
+                        <div class="chapter_left_content">
+                            <code><comm>&lt;!-- Description List --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>dl</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>dt</tag><brk>&gt;</brk> Espresso <brk>&lt;/</brk><tag>dt</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>dd</tag><brk>&gt;</brk> a concentrated pure coffee drink <brk>&lt;/</brk><tag>dd</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>dt</tag><brk>&gt;</brk> Latte <brk>&lt;/</brk><tag>dt</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>dd</tag><brk>&gt;</brk> mixing espresso with milk <brk>&lt;/</brk><tag>dd</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>dl</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <dl class="example">
+                                <dt class="example"> Espresso </dt>
+                                <dd class="example"> a concentrated pure coffee drink </dd>
+                                <dt class="example"> Latte </dt>
+                                <dd class="example"> mixing espresso with milk </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter table_chapter">
+                        <h3 class="chapter_title">Table</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>table</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>caption</tag><brk>&gt;</brk> Fruit Market <brk>&lt;/</brk><tag>caption</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <comm>&lt;!-- For Styling Columns --&gt;</comm></code>
+                            <code>    <brk>&lt;</brk><tag>calgroup</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>col</tag> <attr>style</attr>=<val>"background-color:Sienna"</val><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>col</tag> <attr>style</attr>=<val>"background-color:SteelBlue"</val><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>col</tag> <attr>style</attr>=<val>"background-color:SteelBlue"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>calgroup</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <comm>&lt;!-- Visible Table --&gt;</comm></code>
+                            <code>    <brk>&lt;</brk><tag>thead</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>            <brk>&lt;</brk><tag>th</tag><brk>&gt;</brk><brk>&lt;/</brk><tag>th</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>th</tag><brk>&gt;</brk>Price<brk>&lt;/</brk><tag>th</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>th</tag><brk>&gt;</brk>Quantity<brk>&lt;/</brk><tag>th</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;/</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>thead</tag><brk>&gt;</brk></code>
+
+                            <code>    <brk>&lt;</brk><tag>tbody</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>            <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>apple<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>$1.6<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>15<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;/</brk><tag>tr</tag><brk>&gt;</brk></code>
+
+                            <code>        <brk>&lt;</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>            <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>orange<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>$0.9<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>8<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;/</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>tbody</tag><brk>&gt;</brk></code>
+                            
+                            <code>    <brk>&lt;</brk><tag>tfoot</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>            <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>Total:<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>$2.5<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>td</tag><brk>&gt;</brk>23<brk>&lt;/</brk><tag>td</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;/</brk><tag>tr</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>tfoot</tag><brk>&gt;</brk></code>
+
+                            <code><brk>&lt;/</brk><tag>table</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <calgroup>
+                                    </calgroup><table>
+                                <caption class="example"> Fruit Market </caption>
+                                <colgroup><col style="background-color:Sienna">
+                                    <col style="background-color:SteelBlue">
+                                    <col style="background-color:SteelBlue">
+                                </colgroup>
+                                <thead>
+                                    <tr><th></th> <th class="example">Price</th> <th class="example">Quantity</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td class="example">apple</td> <td class="example">$1.6</td> <td class="example">15</td></tr>
+                                    <tr><td class="example">orange</td> <td class="example">$0.9</td> <td class="example">8</td></tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr><td class="example">Total:</td> <td class="example">$2.5</td> <td class="example">23</td></tr>
+                                </tfoot>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="form_section">
+                <h2 class="section_title">Input &amp; Form Tag</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter input_chapter" id="text_input_chapter">
+                        <h3 class="chapter_title">Input - Text Input</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"text"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"email"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"number"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"password"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"search"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"tel"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"url"</val><brk>&gt;</brk></code>
+                            <div>
+                                <code><brk>&lt;</brk><tag>textarea</tag><brk>&gt;</brk></code>
+                                <code>    Here is text area</code>
+                                <code><brk>&lt;/</brk><tag>textarea</tag><brk>&gt;</brk></code>
+                            </div>
+                        </div>
+                        <div class="chapter_right_content">
+                            <div><input type="text" value="Text"></div>
+                            <div><input type="email" value="cheatsheet@email.com"></div>
+                            <div><input type="number" value="3.14"></div>
+                            <div><input type="password" value="password"></div>
+                            <div><input type="search" value="Search"></div>
+                            <div><input type="tel" value="+1 (555) 555-1234"></div>
+                            <div><input type="url" value="www.cheatsheet.com"></div>
+                            <div><textarea>Here is Text area</textarea></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter">
+                        <h3 class="chapter_title">Input - Text Input (w. preset<br> options)</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>list</attr>=<val>"mylist"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>datalist</tag> <attr>id</attr>=<val>"mylist"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>option</tag><brk>&gt;</brk> Hawaii <brk>&lt;/</brk><tag>option</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>option</tag><brk>&gt;</brk> Margherita <brk>&lt;/</brk><tag>option</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>datalist</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <input list="mylist">
+                            <datalist id="mylist">
+                                <option>Hawaii</option>
+                                <option>Margherita</option>
+                            </datalist>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter_2" id="button_input_chapter">
+                        <h3 class="chapter_title">Input - Button</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>button</tag><brk>&gt;</brk> Button <brk>&lt;/</brk><tag>button</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"button"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"image"</val> <attr>src</attr>=<val>"snow.svg"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"reset"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"submit"</val><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <div><button>Button</button></div>
+                            <div><input type="button"></div>
+                            <div><input id="snow_btn" type="image" src="./HTML Cheat Sheet_files/snow.svg" width="30" height="30"></div>
+                            <div><input type="reset"></div>
+                            <div><input type="submit"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter" id="date_input_chapter">
+                        <h3 class="chapter_title">Input - Date &amp; Time</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"date"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"week"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"month"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"time"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"datetime-local"</val><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <div><input type="date"></div>
+                            <div><input type="week"></div>
+                            <div><input type="month"></div>
+                            <div><input type="time"></div>
+                            <div><input type="datetime-local"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter">
+                        <h3 class="chapter_title">Input - Selection</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>select</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>option</tag><brk>&gt;</brk>option 1<brk>&lt;/</brk><tag>option</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>option</tag><brk>&gt;</brk>option 2<brk>&lt;/</brk><tag>option</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <brk>&lt;</brk><tag>optgroup</tag> <attr>label</attr>=<val>"Option Group"</val><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>option</tag><brk>&gt;</brk>option 3<brk>&lt;/</brk><tag>option</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>option</tag><brk>&gt;</brk>option 4<brk>&lt;/</brk><tag>option</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>optgroup</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>select</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <select>
+                                <option>option 1</option>
+                                <option>option 2</option>
+                                <optgroup label="Option Group">
+                                    <option>option 3</option>
+                                    <option>option 4</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter" id="selectBtn_input_chapter">
+                        <h3 class="chapter_title">Input - Selection Button</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"checkbox"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"color"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"radio"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"range"</val><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <div><input type="checkbox"></div>
+                            <div><input type="color"></div>
+                            <div><input type="radio"></div>
+                            <div><input type="range"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter">
+                        <h3 class="chapter_title">Input - File</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"file"</val><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <div><input type="file"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter">
+                        <h3 class="chapter_title">Output</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>form</tag> <attr>oninput</attr>=<val>"out.value=parseInt(i.value);</val></code>
+                            <code>    <val>meter.value=parseInt(i.value)/100;</val></code>
+                            <code>    <val>prog.value=parseInt(i.value)/100";</val><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <comm>&lt;!-- Input: --&gt;</comm></code>
+                            <code>    <brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"number"</val> <attr>id</attr>=<val>"i"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <comm>&lt;!-- Output: --&gt;</comm></code>
+                            <code>    <brk>&lt;</brk><tag>output</tag> <attr>name</attr>=<val>"out"</val><brk>&gt;</brk>0<brk>&lt;/</brk><tag>output</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>meter</tag> <attr>id</attr>=<val>"meter"</val><brk>&gt;</brk> <brk>&lt;/</brk><tag>meter</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>progress</tag> <attr>id</attr>=<val>"prog"</val><brk>&gt;</brk> <brk>&lt;/</brk><tag>progress</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>form</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <form oninput="out.value=parseInt(i.value); meter.value=parseInt(i.value)/100; prog.value=parseInt(i.value)/100" ;="">
+                                <p>Input:</p>
+                                <input type="number" id="i"><br><br>
+                                <p>Output:</p>
+                                <output name="out">0</output><br>
+                                <meter id="meter"> </meter><br>
+                                <progress id="prog"> </progress>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter input_chapter">
+                        <h3 class="chapter_title">Grouping - Form</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>form</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>fieldset</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>legend</tag><brk>&gt;</brk>Group A<brk>&lt;/</brk><tag>legend</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>label</tag><brk>&gt;</brk>First Name:<brk>&lt;/</brk><tag>label</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"text"</val><brk>&gt;</brk> <brk>&lt;</brk><tag>br</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>label</tag><brk>&gt;</brk>Last Name:<brk>&lt;/</brk><tag>label</tag><brk>&gt;</brk> <brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"text"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>fieldset</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <brk>&lt;</brk><tag>fieldset</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>legend</tag><brk>&gt;</brk>Group B<brk>&lt;/</brk><tag>legend</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>label</tag> <attr>for</attr>=<val>"ra"</val><brk>&gt;</brk>Male:<brk>&lt;/</brk><tag>label</tag><brk>&gt;</brk> </code>
+                            <code>        <brk>&lt;</brk><tag>input</tag> <attr>id</attr>=<val>"ra"</val> <attr>name</attr>=<val>"form"</val> <attr>type</attr>=<val>"radio"</val><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>label</tag> <attr>for</attr>=<val>"rb"</val><brk>&gt;</brk>Female:<brk>&lt;/</brk><tag>label</tag><brk>&gt;</brk></code>
+                            <code>        <brk>&lt;</brk><tag>input</tag> <attr>id</attr>=<val>"rb"</val> <attr>type</attr>=<val>"radio"</val> <attr>name</attr>=<val>"form"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;/</brk><tag>fieldset</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>form</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <form>
+                                <fieldset>
+                                    <legend>Group A</legend>
+                                    <label>First Name:</label> <input type="text"> <br>
+                                    <label>Last Name:</label> <input type="text">
+                                </fieldset> <br>
+                                <fieldset>
+                                    <legend>Group B</legend>
+                                    <label for="ra">Male:</label> <input id="ra" type="radio" name="form_chapter">
+                                    <label for="rb">Female:</label> <input id="rb" type="radio" name="form_chapter">
+                                </fieldset>
+                            </form>
+                            <span class="note">(Label tag allow user to click on small input region)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="media_section">
+                <h2 class="section_title">Media Tag</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">Image</h3>
+                        <div class="chapter_top_content">
+                            <code><comm>&lt;!-- Alternate image base on screen size --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>picture</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>source</tag> <attr>media</attr>=<val>"(max-width:700px)"</val> <attr>srcset</attr>=<val>"img_s.jpg"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>source</tag> <attr>media</attr>=<val>"(max-width:1000px)"</val> <attr>srcset</attr>=<val>"img_m.jpg"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <comm>&lt;!-- Image (can be used alone) --&gt;</comm></code>
+                            <code>    <brk>&lt;</brk><tag>img</tag> <attr>src</attr>=<val>"img.jpg"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>picture</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <picture>
+                                <source media="(max-width:1000px)" srcset="img/mountain_s.jpg">
+                                <source media="(max-width:1500px)" srcset="img/mountain_m.jpg">
+                                <img id="image_example" src="./HTML Cheat Sheet_files/mountain.jpg" width="250px" height="250px" loading="lazy">
+                            </picture>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">Video</h3>
+                        <div class="chapter_top_content">
+                            <code><comm>&lt;!-- Browser pick the first supported format --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>video</tag> <attr>controls</attr><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>source</tag> <attr>src</attr>=<val>"meme.mp4"</val> <attr>type</attr>=<val>"video/mp4"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>source</tag> <attr>src</attr>=<val>"meme.webm"</val> <attr>type</attr>=<val>"video/webm"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code>    <comm>&lt;!-- Subtitles --&gt;</comm></code>
+                            <code>    <brk>&lt;</brk><tag>track</tag> <attr>src</attr>=<val>"subtitle.vtt"</val> <attr>kind</attr>=<val>"subtitles"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>video</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <video id="video_example" controls="" loop="" preload="none" width="300px" height="168px" poster="img/river_cover.jpg">
+                                <source src="video/river.mp4" type="video/mp4">
+                                <track src="video/subtitle.vtt" kind="subtitles">
+                            </video>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">Audio</h3>
+                        <div class="chapter_top_content">
+                            <code><comm>&lt;!-- Browser pick the first supported format --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>audio</tag> <attr>controls</attr><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>source</tag> <attr>src</attr>=<val>"audio.mp3"</val> <attr>type</attr>=<val>"audio/mp3"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>source</tag> <attr>src</attr>=<val>"audio.wav"</val> <attr>type</attr>=<val>"audio/wav"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>audio</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <audio id="audio_example" controls="" preload="none">
+                                <source src="video/audio.mp3" type="audio/mp3">
+                                <track src="video/subtitle.vtt" kind="subtitles">
+                            </audio>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">Hyperlink</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>a</tag> <attr>href</attr>=<val>"https://www.google.com/"</val><brk>&gt;</brk>Google<brk>&lt;/</brk><tag>a</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <a href="https://www.google.com/" class="example">Google</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">IFrame</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>iframe</tag> <attr>src</attr>=<val>"https://www.youtube.com/embed/3KtWfp0UopM?<wbr>si=H-gkLOLB_rtG5DdE"</val><brk>&gt;</brk><brk>&lt;/</brk><tag>iframe</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <iframe src="./HTML Cheat Sheet_files/3KtWfp0UopM.html" loading="lazy"></iframe>
+                        </div>
+                    </div>
+
+                    
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">Canvas</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>canvas</tag> <attr>width</attr>=<val>"200"</val> <attr>height</attr>=<val>"200"</val> <attr>id</attr>=<val>"myCanvas"</val><brk>&gt;</brk><brk>&lt;/</brk><tag>canvas</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><brk>&lt;</brk><tag>script</tag><brk>&gt;</brk></code>
+                            <code>    <tag>let</tag> ctx = document.getElementById(<comm>"myCanvas"</comm>)<wbr>.getContext(<comm>"2d"</comm>);</code>
+                            <code>    <tag>for</tag> (<tag>let</tag> i = 0; i &lt; 10; i++){</code>
+                            <code>        <tag>for</tag> (<tag>let</tag> j = 0; j &lt; 10; j++){</code>
+                            <code>            ctx.fillStyle = <comm>`hsl(</comm>${i*36} ${100} ${(j+1)*9}<comm>)`</comm></code>
+                            <code>            ctx.fillRect(i*20,j*20,(i+1)*20,(i+1)*20);</code>
+                            <code>        }</code>
+                            <code>    }</code>
+                            <code><brk>&lt;/</brk><tag>script</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <canvas width="200" height="200" id="myCanvas"></canvas>
+                            <script>
+                                let ctx = document.getElementById("myCanvas").getContext("2d");
+                                for (let i = 0; i < 10; i++){
+                                    for (let j = 0; j < 10; j++){
+                                        ctx.fillStyle = `hsl(${i*36} ${100} ${(j+1)*9})`
+                                        ctx.fillRect(i*20,j*20,(i+1)*20,(i+1)*20);
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter media_chapter">
+                        <h3 class="chapter_title">Map &amp; Area</h3>
+                        <div class="chapter_top_content">
+                            <code><brk>&lt;</brk><tag>img</tag> <attr>src</attr>=<val>"shape.svg"</val> <attr>usemap</attr>=<val>"#map"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Create a clickable area in image --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>map</tag> <attr>name</attr>=<val>"map"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>area</tag> <attr>shape</attr>=<val>"rect"</val> <attr>coords</attr>=<val>"20 20 60 60"</val> <attr>href</attr>=<val>"url"</val><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>area</tag> <attr>shape</attr>=<val>"circle"</val> <attr>coords</attr>=<val>"100 100 40"</val> <attr>href</attr>=<val>"url"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>map</tag><brk>&gt;</brk></code></div>
+                        <div class="chapter_bottom_content">
+                            <div id="map_L">
+                                <img src="./HTML Cheat Sheet_files/shape.svg" usemap="#mapL" id="shape_svg" loading="lazy">
+                                <map name="mapL">
+                                    <area shape="rect" coords="20 20 60 60" href="https://syntaxsimplified.com/cheatsheet/HTML/url">
+                                    <area shape="circle" coords="100 100 40" href="https://syntaxsimplified.com/cheatsheet/HTML/url">
+                                </map>
+                            </div>
+                            <div id="map_S">
+                                <img src="./HTML Cheat Sheet_files/shape.svg" usemap="#mapS" id="shape_svg" width="100" height="100" loading="lazy">
+                                <map name="mapS">
+                                    <area shape="rect" coords="13 13 40 40" href="https://syntaxsimplified.com/cheatsheet/HTML/url">
+                                    <area shape="circle" coords="66 66 26" href="https://syntaxsimplified.com/cheatsheet/HTML/url">
+                                </map>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="hide_section">
+                <h2 class="section_title">Hidden Content</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Input - Hidden</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>input</tag> <attr>type</attr>=<val>"hidden"</val><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <span class="note">(Here lies a hidden input)</span>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Dropdown Content</h3>
+                        <div class="chapter_left_content">
+                            <code><brk>&lt;</brk><tag>details</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>summary</tag><brk>&gt;</brk>Details Tag<brk>&lt;/</brk><tag>summary</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>p</tag><brk>&gt;</brk>You can hide content under a dropdown.<brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>details</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <details>
+                                <summary>Details Tag</summary>
+                                <p>You can hide content under a dropdown.</p>
+                            </details>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Pop Up Window</h3>
+                        <div class="chapter_left_content">
+                            <code><comm>&lt;!-- Add/Remove "open" to toggle the dialog --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>dialog</tag> <attr>open</attr><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>p</tag><brk>&gt;</brk>Dialog is a pop up sub-window.<brk>&lt;/</brk><tag>p</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>dialog</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_right_content">
+                            <div id="dialog_box">
+                                <p id="dialog_box_msg">Dialog is a pop up sub-window.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Template</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>template</tag><brk>&gt;</brk>    <brk>&lt;/</brk><tag>template</tag><brk>&gt;</brk></code>
+                            <br>
+                            <p class="note">(Template is a container of HTML fragment)</p>
+                            <p class="note">(Use Javascript to clone there fragment and insert them into the DOM tree to display them.)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="lang_section">
+                <h2 class="section_title">Javascript, CSS &amp; XML</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">CSS Support</h3>
+                        <div class="chapter_content">
+                            <code><comm>&lt;!-- Link CSS file --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>link</tag> <attr>rel</attr>=<val>"stylesheet"</val> <attr>href</attr>=<val>"style.css"</val><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Add CSS file --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>style</tag><brk>&gt;</brk></code>
+                            <code>    h1 { color:red; }</code>
+                            <code><brk>&lt;/</brk><tag>style</tag><brk>&gt;</brk></code>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Javascript Support</h3>
+                        <div class="chapter_content">
+                            <code><comm>&lt;!-- Add Javascript file --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>script</tag> <attr>src</attr>=<val>"code.js"</val><brk>&gt;</brk> <brk>&lt;/</brk><tag>script</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><comm>&lt;!-- Add Javascript code --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>script</tag><brk>&gt;</brk></code>
+                            <code>    console.log("Hello World!")</code>
+                            <code><brk>&lt;/</brk><tag>script</tag><brk>&gt;</brk></code>
+                            <br>
+                            <code><brk>&lt;</brk><tag>noscript</tag><brk>&gt;</brk> Alternative text if javascript is not supported <brk>&lt;/</brk><tag>noscript</tag><brk>&gt;</brk></code>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">XML Support - MathML</h3>
+                        <div class="chapter_top_content">
+                            <code><comm>&lt;!-- All MathML XML tag is allowed --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>math</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>mi</tag><brk>&gt;</brk>y<brk>&lt;/</brk><tag>mi</tag><brk>&gt;</brk><brk>&lt;</brk><tag>mi</tag><brk>&gt;</brk>=<brk>&lt;/</brk><tag>mi</tag><brk>&gt;</brk><brk>&lt;</brk><tag>mi</tag><brk>&gt;</brk>2<brk>&lt;/</brk><tag>mi</tag><brk>&gt;</brk><brk>&lt;</brk><tag>mi</tag><brk>&gt;</brk>x<brk>&lt;/</brk><tag>mi</tag><brk>&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>math</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <math> <mi>y</mi><mi>=</mi><mi>2</mi><mi>x</mi> </math>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">XML Support - SVG</h3>
+                        <div class="chapter_top_content">
+                            <code><comm>&lt;!-- All SVG XML tag is allowed --&gt;</comm></code>
+                            <code><brk>&lt;</brk><tag>svg</tag><brk>&gt;</brk></code>
+                            <code>    <brk>&lt;</brk><tag>circle</tag> <attr>cx</attr>=<val>"40"</val> <attr>cy</attr>=<val>"40"</val> <attr>r</attr>=<val>"30"</val> <attr>fill</attr>=<val>"coral"</val><brk>/&gt;</brk></code>
+                            <code><brk>&lt;/</brk><tag>svg</tag><brk>&gt;</brk></code>
+                        </div>
+                        <div class="chapter_bottom_content">
+                            <svg width="60" height="60" id="svg_circle_L">
+                                <circle cx="30" cy="30" r="30" fill="coral"></circle>
+                            </svg>
+                            <svg width="40" height="40" id="svg_circle_S">
+                                <circle cx="20" cy="20" r="20" fill="coral"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="DOM_section">
+                <h2 class="section_title">DOM Tree</h2>
+                <div id="dom_content" class="grid_layout">
+                    <ul id="dom_text">
+                        <li>When web browser receive the HTML document, it turn the file into a <u>Document Object Model (DOM) Tree</u>.</li><br>
+                        <li>The tree contains has 4 type of node:</li>
+                        <ul>
+                            <li>Document Type node</li>
+                            <li>Element node</li>
+                            <li>Text node</li>
+                            <li>Comment node</li>
+                        </ul><br>
+                        <li>HTML elements are converted into a Javascript object , then combine into a tree structure.</li><br>
+                        <li>Their attributes become a member variable with object function to manipulate.</li>
+                    </ul>
+                    <img src="./HTML Cheat Sheet_files/DOM Tree.svg" id="dom_tree_img" loading="lazy">
+                </div>
+            </section>
+
+
+            
+            <section id="meta_section">
+                <h2 class="section_title">Meta name, http-equiv &amp; Link</h2>
+                <div class="flex_layout">
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Meta Name</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"description"</val> <attr>content</attr>=<val>"This is an example of a meta description"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"keywords"</val> <attr>content</attr>=<val>"HTML,cheatsheet,website"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"author"</val> <attr>content</attr>=<val>"John Doe"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"viewport"</val> <attr>content</attr>=<val>"width=device-width, initial-scale=1.0"</val><brk>&gt;</brk> <span class="note">(HTML viewport key-value pair)</span></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"application-name"</val> <attr>content</attr>=<val>"My Web App"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"generator"</val> <attr>content</attr>=<val>"WordPress 5.8"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"theme-color"</val> <attr>content</attr>=<val>"#FFFFFF"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"referrer"</val> <attr>content</attr>=<val>"no-referrer"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>name</attr>=<val>"color-scheme"</val> <attr>content</attr>=<val>"light dark"</val><brk>&gt;</brk> <span class="note">(HTML color scheme name)</span></code>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Meta http-equiv</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>http-equiv</attr>=<val>"content-type"</val> <attr>content</attr>=<val>"text/html; charset=UTF-8"</val><brk>&gt;</brk> <span class="note">(MIME Type)</span></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>http-equiv</attr>=<val>"content-security-policy"</val> <attr>content</attr>=<val>"default-src 'self'"</val><brk>&gt;</brk> <span class="note">(HTML content security policy)</span></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>http-equiv</attr>=<val>"default-style"</val> <attr>content</attr>=<val>"my_style.css"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>http-equiv</attr>=<val>"refresh"</val> <attr>content</attr>=<val>"30"</val><brk>&gt;</brk></code>
+                        </div>
+                    </div>
+
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Open Graph</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>property</attr>=<val>"og:title"</val> <attr>content</attr>=<val>"Example Title"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>property</attr>=<val>"og:description"</val> <attr>content</attr>=<val>"This is the website description"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>property</attr>=<val>"og:image"</val> <attr>content</attr>=<val>"https://cheatsheet.com/image.jpg"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>property</attr>=<val>"og:url"</val> <attr>content</attr>=<val>"https://cheatsheet.com/page.html"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>meta</tag> <attr>property</attr>=<val>"og:type"</val> <attr>content</attr>=<val>"website"</val><brk>&gt;</brk></code>
+                            <code><span class="note">(more open graph tags ...)</span></code>
+                        </div>
+                    </div>
+                    
+                    <div class="flex_content chapter">
+                        <h3 class="chapter_title">Link</h3>
+                        <div class="chapter_content">
+                            <code><brk>&lt;</brk><tag>link</tag> <attr>rel</attr>=<val>"stylesheet"</val> <attr>href</attr>=<val>"styles.css"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>link</tag> <attr>rel</attr>=<val>"icon"</val> <attr>href</attr>=<val>"favicon.ico"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>link</tag> <attr>rel</attr>=<val>"alternate"</val> <attr>href</attr>=<val>"https://example.com/fr"</val> <attr>hreflang</attr>=<val>"fr"</val><brk>&gt;</brk></code>
+                            <code><brk>&lt;</brk><tag>link</tag> <attr>rel</attr>=<val>"preload"</val> <attr>href</attr>=<val>"main.js"</val> <attr>as</attr>=<val>"script"</val><brk>&gt;</brk></code>
+                            <code><span class="note">(more rel values ...)</span></code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="attr_section">
+                <h2 class="section_title">HTML Attributes</h2>
+                <div class="grid_layout">
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">Global Attribute</h3>
+                        <div class="row_content">
+                            <code><attr>id class title tabindex nonce style data-*</attr></code>
+                            <code><attr>contenteditable autocapitalize autofocus spellcheck inputmode accesskey enterkeyhint</attr></code>
+                            <code><attr>draggable hidden popover lang dir translate inert</attr></code>
+                            <code><attr>exportparts part slot</attr></code>
+                            <code><attr>itemprop itemid itemref itemscope itemtype</attr></code>
+                        </div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">Visible Element</h3>
+                        <div class="row_content">
+                            <code><attr>onclick ondblclick onmousedown onmousemove onmouseout onmouseover onmouseup onmousewheel onscroll onwheel</attr></code>
+                            <code><attr>ondrag ondrop ondragenter ondragleave ondragover ondragstart</attr></code>
+                            <code><attr>onblur onchange oncontextmenu onfocus oninput oninvalid onselect</attr></code>
+                            <code><attr>oncopy oncut onpaste onkeydown onkeypress onkeyup</attr></code>
+                        </div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">Playable Media Element</h3>
+                        <div class="row_content">
+                            <code><attr>autoplay controls controlslist crossorigin disableremoteplayback height loop muted preload src width</attr></code>
+                            <code><attr>onplay onpause onsuspend ontimeupdate onvolumechange onratechange onplaying onwaiting onended</attr></code>
+                            <code><attr>oncanplay oncanplaythrough ondurationchange onloadeddata onloadedmetadata onloadstart onprogress onseeked onseeking</attr></code>
+                            <code><attr>onemptied onstalled onabort onerror</attr></code>
+                        </div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">a</h3>
+                        <div class="row_content"><code><attr>download href hreflang ping referrerpolicy rel target type</attr></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">area</h3>
+                        <div class="row_content"><code><attr>alt coords download href hreflang ping referrerpolicy rel shape target</attr></code></div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">body</h3>
+                        <div class="row_content">
+                            <code><attr>onafterprint onbeforeprint onbeforeunload onblur onerror onfocus onhashchange onlanguagechange onload onmessage onmessageerror onoffline ononline onpageswap onpagehide onpagereveal onpageshow onpopstate onresize onrejectionhandled onstorage onunhandlerejection onunload</attr></code>
+                        </div>
+                    </div>
+                    <div class="tquat_row attr_row">
+                        <h3 class="row_title">button</h3>
+                        <div class="row_content"><code><attr>autofocus disabled form formaction formenctype formmethod formnovalidate formtarget name popovertarget popovertargetaction type value</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">base</h3>
+                        <div class="row_content"><code><attr>href target</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">blockquote</h3>
+                        <div class="row_content"><code><attr>cite</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">canvas</h3>
+                        <div class="row_content"><code><attr>height width</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">col &amp; colgroup</h3>
+                        <div class="row_content"><code><attr>span</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">data</h3>
+                        <div class="row_content"><code><attr>value</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">del</h3>
+                        <div class="row_content"><code><attr>cite datetime</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">details</h3>
+                        <div class="row_content"><code><attr>open ontoggle name</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">dialog</h3>
+                        <div class="row_content"><code><attr>open</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">fieldset</h3>
+                        <div class="row_content"><code><attr>disabled form name</attr></code></div>
+                    </div>
+                    <div class="tquat_row attr_row">
+                        <h3 class="row_title">form</h3>
+                        <div class="row_content"><code><attr>accept-charset action autocapitalize autocomplete enctype method novalidate name onreset onsubmit rel target</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">html</h3>
+                        <div class="row_content"><code><attr>xmls</attr></code></div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">img</h3>
+                        <div class="row_content"><code><attr>alt crossorigin decoding elementtiming fetchpriority height ismap loading onabort onerror onload referrerpolicy sizes src srcset usemap width</attr></code></div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">input</h3>
+                        <div class="row_content">
+                            <code><attr>accept alt autocomplete autofocus capture checked dirname disabled form formaction formenctype formmethod formnovalidate formtarget height list max maxlength min minlength multiple name onload onsearch pattern placeholder popovertarget popovertargetaction readonly required size src step type value width</attr></code>
+                        </div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">ins</h3>
+                        <div class="row_content"><code><attr>cite datetime</attr></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">iframe</h3>
+                        <div class="row_content"><code><attr>allow allowfullscreen height loading name referrerpolicy sandbox src srcdoc width</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">label</h3>
+                        <div class="row_content"><code><attr>for form</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">li</h3>
+                        <div class="row_content"><code><attr>value</attr></code></div>
+                    </div>
+                    <div class="tquat_row attr_row">
+                        <h3 class="row_title">link</h3>
+                        <div class="row_content"><code><attr>as blocking crossorigin disabled fetchpriority href hreflang imagesizes imagesrcset integrity media onload referrerpolicy rel sizes title type</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">map</h3>
+                        <div class="row_content"><code><attr>name</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">meta</h3>
+                        <div class="row_content"><code><attr>charset content http-equiv name</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">meter</h3>
+                        <div class="row_content"><code><attr>form high low max min optimum value</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">ol</h3>
+                        <div class="row_content"><code><attr>reversed start type</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">optgroup</h3>
+                        <div class="row_content"><code><attr>disabled label</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">option</h3>
+                        <div class="row_content"><code><attr>disabled label selected value</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">output</h3>
+                        <div class="row_content"><code><attr>for form name</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">progress</h3>
+                        <div class="row_content"><code><attr>max value</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">q</h3>
+                        <div class="row_content"><code><attr>cite</attr></code></div>
+                    </div>
+                    <div class="tquat_row attr_row">
+                        <h3 class="row_title">script</h3>
+                        <div class="row_content"><code><attr>async blocking crossorigin defer fetchpriority integrity nomodule nonce onerror onload referrerpolicy src type</attr></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">select</h3>
+                        <div class="row_content"><code><attr>autocomplete autofocus disabled form multiple name required size</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">slot</h3>
+                        <div class="row_content"><code><attr>name</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">source</h3>
+                        <div class="row_content"><code><attr>height media sizes src srcset type width</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">style</h3>
+                        <div class="row_content"><code><attr>blocking media nonce type</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">td</h3>
+                        <div class="row_content"><code><attr>colspan headers rowspan</attr></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">template</h3>
+                        <div class="row_content"><code><attr>shadowrootmode shadowrootclonable shadowrootdelegatesfocus</attr></code></div>
+                    </div>
+                    <div class="tquat_row attr_row">
+                        <h3 class="row_title">textarea</h3>
+                        <div class="row_content"><code><attr>autocapitalize autocomplete autocorrect autofocus cols dirname disabled form maxlength minlength name placeholder readonly required rows spellcheck wrap</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">th</h3>
+                        <div class="row_content"><code><attr>colspan headers rowspan scope</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">time</h3>
+                        <div class="row_content"><code><attr>datetime</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">track</h3>
+                        <div class="row_content"><code><attr>default kind label oncuechange src srclang</attr></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">video</h3>
+                        <div class="row_content"><code><attr>disablepictureinpicture playsinline poster</attr></code></div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="value_section">
+                <h2 class="section_title">HTML Values</h2>
+                <div class="grid_layout">
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">accept</h3>
+                        <div class="row_content"><code><val>"audio/*" "video/*" "image/*" [.File Types]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">accept-charset</h3>
+                        <div class="row_content"><code><val>[Character Encoding]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">accesskey</h3>
+                        <div class="row_content"><code><val>[Keyboard Key]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">action</h3>
+                        <div class="row_content"><code><val>[Backend URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">allow</h3>
+                        <div class="row_content"><code><val>[Permission Policy Syntax]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">alt</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">as</h3>
+                        <div class="row_content"><code><val>"audio" "document" "embed" "fetch" "font" "image" "object" "script" "style" "track" "video" "worker"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">async</h3>
+                        <div class="row_content"><code><val>[Javascript File]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">autocapitalize</h3>
+                        <div class="row_content"><code><val>"on" "off" "words" "characters"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">autocomplete</h3>
+                        <div class="row_content"><code><val>"on" "off" [Auto Fill Detail Tokens]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">autofocus</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">autoplay</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">charset</h3>
+                        <div class="row_content"><code><val>[character encoding]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">checked</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">cite</h3>
+                        <div class="row_content"><code><val>[URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">class</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">cols</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">colspan</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">content</h3>
+                        <div class="row_content"><code><val>(see HTML head section)</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">contenteditable</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">controls</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">coords</h3>
+                        <div class="row_content"><code><val>rectangle: x1,y1,x2,y2 circle: x,y,r polygon: x1,y1,x2,y2,...,xn,yn</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">crossorigin</h3>
+                        <div class="row_content"><code><val>"anonymous" "use-credentils" ""</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">data-*</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">datetime</h3>
+                        <div class="row_content"><code><val>[ISO8601 time format] (eg. YYYY-MM-DDThh:mm:ssTZD)</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">decoding</h3>
+                        <div class="row_content"><code><val>"sync" "async" "auto"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">default</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">defer</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">dir</h3>
+                        <div class="row_content"><code><val>"ltr" "rtl" "auto"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">dirname</h3>
+                        <div class="row_content"><code><val>"{HTML name}.dir" "rtl" "ltr"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">disabled</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">download</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">draggable</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">enctype</h3>
+                        <div class="row_content"><code><val>[MIME type]</val></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">enterkeyhint</h3>
+                        <div class="row_content"><code><val>"enter" "done" "go" "next" "previous" "search" "send"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">fetchpriority</h3>
+                        <div class="row_content"><code><val>"high" "low" "auto"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">for</h3>
+                        <div class="row_content"><code><val>{HTML id}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">form</h3>
+                        <div class="row_content"><code><val>{HTML id}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">formaction</h3>
+                        <div class="row_content"><code><val>[backend URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">formenctype</h3>
+                        <div class="row_content"><code><val>"application/x-www-form-urlencoded" "multipart/form-data" "text/plain"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">formmethod</h3>
+                        <div class="row_content"><code><val>"get" "post "dialog"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">formnovalidate</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">formtarget</h3>
+                        <div class="row_content"><code><val>"_self" "_blank_" "_parent" "_top"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">headers</h3>
+                        <div class="row_content"><code><val>{HTML id}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">height</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">hidden</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">high</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">href</h3>
+                        <div class="row_content"><code><val>[URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">hreflang</h3>
+                        <div class="row_content"><code><val>[ISO 639-1 language code]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">http-equiv</h3>
+                        <div class="row_content"><code><val>(see HTML head section)</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">id</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">integrity</h3>
+                        <div class="row_content"><code><val>[hash algorithm]-[hash key] (eg. sha256-A591A6D40BF...)</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">inert</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">inputmode</h3>
+                        <div class="row_content"><code><val>"none" "text"  "decimal"  "numeric"  "tel"  "search"  "email"  "url"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">ismap</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">itemid</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">itemprop</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">itemref</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">itemscope</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">itemtype</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="half_row attr_row">
+                        <h3 class="row_title">kind</h3>
+                        <div class="row_content"><code><val>"subtitles"  "captions"  "chapters"  "metadata"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">label</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">lang</h3>
+                        <div class="row_content"><code><val>[ISO 639-1 language code]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">loading</h3>
+                        <div class="row_content"><code><val>"lazy"  "eager"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">list</h3>
+                        <div class="row_content"><code><val>{HTML id}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">loop</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">low</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">max</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">maxlength</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">media</h3>
+                        <div class="row_content"><code><val>[media query]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">method</h3>
+                        <div class="row_content"><code><val>"post" "get" "dialog"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">min</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">minlength</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">multiple</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">muted</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">name</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">novalidate</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">oneventhandler</h3>
+                        <div class="row_content"><code><val>[Javascript function]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">open</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">optimum</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">pattern</h3>
+                        <div class="row_content"><code><val>[regular expression]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">ping</h3>
+                        <div class="row_content"><code><val>[URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">placeholder</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">playsinline</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">popover</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">popovertarget</h3>
+                        <div class="row_content"><code><val>{HTML id}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">popovertargetaction</h3>
+                        <div class="row_content"><code><val>"show" "hide" "toggle"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">poster</h3>
+                        <div class="row_content"><code><val>[image URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">preload</h3>
+                        <div class="row_content"><code><val>"auto" "metadata" "none"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">readonly</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">rel</h3>
+                        <div class="row_content"><code><val>"alternate"  "author"  "bookmark"  "canonical" "dns-prefetch" "external" "expect" "help" "icon" "license" "manifest" "me" "modulepreload" "next" "nofollow" "noopener" "noreferrer" "opener" "pingback" "preconnect" "prefetch" "preload" "prerender" "prev" "privacy-policy" "search" "stylesheet" "tag" "terms-of-service"</val></code></div>
+                    </div>
+                    <div class="tquat_row attr_row">
+                        <h3 class="row_title">referrerpolicy</h3>
+                        <div class="row_content"><code><val>"no-referrer" "no-referrer-when-downgrade" "origin" "origin-when-cross-origin" "same-origin" "strict-origin""strict-origin-when-cross-origin" "unsafe-url"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">required</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">reversed</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">role</h3>
+                        <div class="row_content"><code><val>[WAI-ARIA role]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">rows</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">rowspan</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">sandbox</h3>
+                        <div class="row_content"><code><val>"allow-downloads" "allow-forms" "allow-modals" "allow-orientation-lock" "allow-pointer-lock" "allow-popups" "allow-popups-to-escape-sandbox" "allow-presentation" "allow-same-origin" "allow-scripts" "allow-top-navigation" "allow-top-navigation-by-user-activation" "allow-top-navigation-to-custom-protocols"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">scope</h3>
+                        <div class="row_content"><code><val>"row" "col" "rowgroup" "colgroup"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">selected</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">shape</h3>
+                        <div class="row_content"><code><val>"rect"  "circle"  "poly" "default"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">size</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">sizes</h3>
+                        <div class="row_content"><code><val>[media condition] "int x int"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">slot</h3>
+                        <div class="row_content"><code><val>{HTML name}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">span</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">spellcheck</h3>
+                        <div class="row_content"><code><val>boolean</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">src</h3>
+                        <div class="row_content"><code><val>[file URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">srcdoc</h3>
+                        <div class="row_content"><code><val>[HTML code]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">srclang</h3>
+                        <div class="row_content"><code><val>[ISO 639-1 language code]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">srcset</h3>
+                        <div class="row_content"><code><val>[image URL]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">start</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">step</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">style</h3>
+                        <div class="row_content"><code><val>[CSS code]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">tabindex</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">target</h3>
+                        <div class="row_content"><code><val>"_self" "_blank" "_parent" "_top" "_unfencedTop"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">title</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">translate</h3>
+                        <div class="row_content"><code><val>"yes" "no"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">type &lt;button&gt;</h3>
+                        <div class="row_content"><code><val>"yes" "no"</val></code></div>
+                    </div>
+                    <div class="full_row attr_row">
+                        <h3 class="row_title">type &lt;input&gt;</h3>
+                        <div class="row_content"><code><val>"button" "checkbox" "color" "date" "datetime-local" "email" "file" "hidden" "image" "month" "number" "password" "radio" "range" "reset" "search" "submit" "tel" "text" "time" "url" "week"d</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">type &lt;ol&gt;</h3>
+                        <div class="row_content"><code><val>"a" "A" "i" "I" '1"</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">type &lt;script&gt;</h3>
+                        <div class="row_content"><code><val>"module" "importmap" [MIME Type]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">type &lt;source&gt; &lt;link&gt;</h3>
+                        <div class="row_content"><code><val>[MIME Type]</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">usemap</h3>
+                        <div class="row_content"><code><val>{#HTML name}</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">value &lt;button&gt; &lt;input&gt; &lt;option&gt;</h3>
+                        <div class="row_content"><code><val>string</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">value &lt;li&gt; &lt;meter&gt; &lt;progress&gt;</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">width</h3>
+                        <div class="row_content"><code><val>int</val></code></div>
+                    </div>
+                    <div class="quat_row attr_row">
+                        <h3 class="row_title">wrap</h3>
+                        <div class="row_content"><code><val>"soft"  "hard"</val></code></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+        </aside>
+
+        <footer>
+        </footer>
+    
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <style>
+        text{
+            font-family: Arial;
+            font-size: 85px;
+			font-weight:900;
+        }
+    </style>
+	<title>HTML5 Logo</title>
+	<text x="10" y="65" fill="#999" class="property">Javascript</text>
+	<path fill="#D6BA32" d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512"/>
+	<path fill="#FEDA3E" d="M256 480.5V131H404.3L376 447"/>
+	<path fill="#ebebeb" d="M195 175 H235 V430 L138 395 L135 352 L195 370"/>
+	<path fill="#fff" d="M275 175 H380 L375 219 H315 V283 L371 278 L362 405 L275 432 V385 L328 368 L330 322 L275 331"/>
+</svg>

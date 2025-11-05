@@ -3,23 +3,21 @@
     <title>Leap Year Checker</title>
 </head>
 <body>
-    <form style="justify-content: center;" id="leap-check">
-        <div>
-            <label for="num">Enter Number</label>
-            <input type="number" name="num" id="num">
-        </div>
-        <button type="submit">Check</button><br>
-        <label id="result"></label>
-    </form>
+    <div>
+        <label for="num">Enter Number</label>
+        <input type="number" name="num" id="num">
+    </div>
+    <button onclick="checkYear()">Check</button><br>
+    <label id="result"></label>
     <script>
-        document.getElementById("leap-check").addEventListener("submit", function(e){
-            e.preventDefault();
+        function checkYear(){
             year=parseInt(document.getElementById("num").value);
             result=document.getElementById("result");
-            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0){
+
+            if ((year %4==0 && year %100!=0) || year %400==0){
                 result.innerText=year+" is a Leap Year";
             } else result.innerText=year+" is a not Leap Year";
-        });
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 250 280" xmlns="http://www.w3.org/2000/svg"> 
+    <style>
+        .title{
+            font: italic 24px Times New Roman, Serif;
+            fill: hsl(0, 0%, 80%); 
+        }
+
+        .content{ 
+            font: 10px Times New Roman, Serif;
+            fill: hsl(0, 0%, 80%); 
+        }
+        .arrow{
+            fill:rgba(0,0,0,0); 
+            stroke-width:0.5;
+            stroke:#EEEEEE;
+        }
+    </style>
+
+    <text x="10" y="30" class="title">DOM Tree</text>
+
+    <text x="20" y="65" class="content">DOCTYPE: html</text>
+    <text x="20" y="80" class="content">html lang = “en”</text>
+    <path d="M10 45 V78 H18 M10 62 H18" class="arrow"/>
+
+    <text x="40" y="95" class="content">#text: “ \n”</text>
+    <text x="40" y="110" class="content">body</text>
+    <path d="M30 85 V108 H38 M30 92 H38" class="arrow"/>
+
+    <text x="60" y="125" class="content">#text: “ \n”</text>
+    <text x="60" y="140" class="content">h1</text>
+    <path d="M50 115 V138 H58 M50 122 H58" class="arrow"/>
+
+    <text x="75" y="155" class="content">#text: “Web Page Heading”</text>
+    <path d="M65 145 V153 H72" class="arrow"/>
+    
+    <text x="60" y="170" class="content">#text: “ \n”</text>
+    <text x="60" y="185" class="content">p</text>
+    <path d="M50 138 V183 H58 M50 168 H58" class="arrow"/>
+
+    <text x="75" y="200" class="content">#text: “web page paragraph</text>
+    <path d="M65 190 V198 H72" class="arrow"/>
+    
+    <text x="60" y="215" class="content">#text: “ \n”</text>
+    <text x="60" y="230" class="content">p</text>
+    <path d="M50 183 V228 H58 M50 213 H58" class="arrow"/>
+
+    <text x="75" y="245" class="content">#text: “hello world”</text>
+    <path d="M65 235 V243 H72" class="arrow"/>
+    
+    <text x="60" y="260" class="content">#text: “ \n”</text>
+    <path d="M50 228 V258 H58" class="arrow"/>
+</svg>

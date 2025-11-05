@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="405">                                    
+<title>HTML layout</title>
+
+<rect fill="#b80404" stroke="#b80404" x="10" y="10" width="450" height="40"/>
+<rect fill="#b8b804" stroke="#b8b804" x="10" y="60" width="450" height="25"/>
+<rect fill="#009900" stroke="#009900" x="10" y="95" width="60" height="250"/>
+<rect fill="#04b8b8" stroke="#04b8b8" x="80" y="95" width="380" height="250"/>
+<rect fill="#4141e8" stroke="#ffffff" stroke-width="6" x="100" y="150" width="340" height="75" stroke-opacity="0"/>
+<rect fill="#4141e8" stroke="#ffffff" stroke-width="6" x="100" y="250" width="340" height="75" stroke-opacity="0"/>
+<rect fill="#b804b8" stroke="#b804b8" x="10" y="355" width="450" height="40"/>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="190" y="16" width="117" height="38" style="color: white;">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Header</p>
+</foreignObject>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="213" y="58" width="81" height="38" style="color: white;">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Nav</p>
+</foreignObject>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="240" y="105" width="81" height="38" style="color: white;">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Main</p>
+</foreignObject>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="225" y="173" width="117" height="38" style="color: white;">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Section</p>
+</foreignObject>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="225" y="273" width="117" height="38" style="color: white;">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Section</p>
+</foreignObject>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="195" y="360" width="117" height="38" style="color: white;">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Footer</p>
+</foreignObject>
+
+<foreignObject font-size="28" font-family="Arial, Helvetica, sans-serif" x="25" y="260" width="81" height="38" style="color: white;" transform="rotate(-90 25,260) ">
+    <p xmlns="http://www.w3.org/1999/xhtml" style="margin:0;">Aside</p>
+</foreignObject>
+<style xmlns="http://www.w3.org/1999/xhtml">@import url(http://fonts.googleapis.com/css?family=Habibi);</style>
+</svg>

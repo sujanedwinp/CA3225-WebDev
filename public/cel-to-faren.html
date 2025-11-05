@@ -3,36 +3,34 @@
     <title>Temperature Convert</title>
 </head>
 <body>
-    <form style="justify-content: center;" id="con-temp">
-        <div>
-            <label for="num">Enter Number</label>
-            <input type="number" name="num" id="num">
-        </div>
-        <div>
-            <label for="temp">Convert to</label>
-            <select name="temp" id="temp">
-                <option value="c">C</option>
-                <option value="f">F</option>
-            </select>
-        </div>
-        <button type="submit">Convert</button><br>
-        <label id="result"></label>
-    </form>
+    <div>
+        <label for="num">Enter Number</label>
+        <input type="number" name="num" id="num">
+    </div>
+    <div>
+        <label for="temp">Convert to</label>
+        <select name="temp" id="temp">
+            <option value="c">C</option>
+            <option value="f">F</option>
+        </select>
+    </div>
+    <button onclick="checkTemp()">Convert</button><br>
+    <label id="result"></label>
 
     <script>
-        document.getElementById("con-temp").addEventListener("submit", function(e){
-            e.preventDefault();
+        function checkTemp(){
             num=document.getElementById("num").value;
             temp_to=document.getElementById("temp").value;
-            result=document.getElementById("result");
-            if(temp_to==='c'){
-                result.innerHTML=(num - 32)*(5/9)+" °C";
-            } else if(temp_to==='f'){
-                result.innerText=num*(9/5) + (32)+" °F";
+            result=0;
+            if(temp_to=='c'){
+                result= (num - 32)*(5/9)+" °C";
+            } else if(temp_to=='f'){
+                result= num*(9/5) + (32)+" °F";
             } else {
-                result.innerText="";
+                result="";
             }
-        });
+            document.getElementById("result").innerText=result;
+        };
     </script>
 </body>
 </html>
